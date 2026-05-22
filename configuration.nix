@@ -2,23 +2,33 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+  imports = [
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
+  boot.loader.systemd-boot.configurationLimit = 8;
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Nix
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 30d";
+  };
+  nix.settings.auto-optimise-store = true;
 
   networking.hostName = "karadeniz"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -67,14 +77,28 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
+    jack.enable = true;
+    wireplumber.enable = true;
+  };
+  security.rtkit.enable = true;
+
+  # Graphics
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-media-driver
+    ];
   };
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.arda = {
     isNormalUser = true;
     description = "Arda";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    shell = pkgs.fish;
   };
 
   # Allow unfree packages
@@ -83,15 +107,35 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-  #  wget
-  git
-  micro
-  tree
+    #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    #  wget
+    git
+    gnome-tweaks
+    gnome-extension-manager
+    dconf-editor
   ];
 
   # Programs
+  programs.fish.enable = true;
   programs.firefox.enable = true;
+  programs.localsend = {
+    enable = true;
+    openFirewall = true;
+  };
+
+  # Fonts
+  fonts.packages = with pkgs; [
+    noto-fonts
+    noto-fonts-color-emoji
+    noto-fonts-cjk-sans
+    dejavu_fonts
+    liberation_ttf
+    nerd-fonts.jetbrains-mono
+  ];
+
+  # Services
+  services.fwupd.enable = true;
+  zramSwap.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
