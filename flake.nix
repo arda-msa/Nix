@@ -21,13 +21,13 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          ./configuration.nix
+          ./nixos/configuration.nix
           home-manager.nixosModules.home-manager
           {
             home-manager = {
               useGlobalPkgs = true;
               useUserPackages = true;
-              users.arda = import ./home.nix;
+              users.arda = import ./home-manager/home.nix;
               backupFileExtension = "backup";
               extraSpecialArgs = { inherit inputs; };
             };

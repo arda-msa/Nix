@@ -11,7 +11,22 @@
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
-    # Shell
+    # Editors
+    micro
+    neovim
+
+    # Terminal
+    ghostty
+
+    # Development
+    gcc
+    tree-sitter
+    lua-language-server
+    nixd
+    nixfmt
+    stylua
+
+    # Shell Utilities
     bat
     delta
     eza
@@ -21,42 +36,30 @@
     starship
     zoxide
 
-    # Terminal
-    ghostty
-
-    # Editor
-    gcc
-    micro
-    neovim
-    tree-sitter
-
-    # LSP & Formatter
-    lua-language-server
-    stylua
-    nixd
-    nixfmt
-
-    # Media
-    imagemagick
-
-    # CLI & TUI
-    btop
-    cava
-    cbonsai
-    cmatrix
-    fastfetch
+    # File Management
     jq
-    lazygit
     p7zip
     sshfs
     tree
     unzip
-    wev
-    wget
-    wiremix
     yazi
 
-    # Apps
+    # System
+    btop
+    fastfetch
+    lazygit
+    wiremix
+    wev
+
+    # Media
+    imagemagick
+    cava
+
+    # Fun
+    cbonsai
+    cmatrix
+
+    # GUI Apps
     obsidian
   ];
 }
