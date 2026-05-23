@@ -17,11 +17,6 @@
     "nix-command"
     "flakes"
   ];
-  nix.gc = {
-    automatic = true;
-    dates = "weekly";
-    options = "--delete-older-than 30d";
-  };
   nix.settings.auto-optimise-store = true;
 
   # Networking
@@ -87,6 +82,9 @@
   environment.systemPackages = with pkgs; [
     git
     wget
+    nvd
+    nix-output-monitor
+    nix-your-shell
   ];
 
   # Programs
@@ -95,6 +93,15 @@
   programs.localsend = {
     enable = true;
     openFirewall = true;
+  };
+  programs.nh = {
+    enable = true;
+    flake = "/home/arda/nixos";
+    clean = {
+      enable = true;
+      dates = "weekly";
+      extraArgs = "--keep-since 30d";
+    };
   };
 
   # Fonts

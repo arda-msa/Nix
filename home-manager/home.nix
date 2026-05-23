@@ -54,6 +54,7 @@
     # Media
     imagemagick
     cava
+    mpv
 
     # Fun
     cbonsai
