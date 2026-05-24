@@ -20,4 +20,12 @@
     loupe
     nautilus
   ];
+
+  xdg.terminal-exec = {
+    enable = true;
+    settings = {
+      GNOME = [ "com.mitchellh.ghostty.desktop" ];
+      default = [ "com.mitchellh.ghostty.desktop" ];
+    };
+  };
 }
