@@ -37,6 +37,7 @@
     zoxide
 
     # File Management
+    exiftool
     jq
     p7zip
     sshfs

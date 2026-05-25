@@ -20,7 +20,7 @@
   nix.settings.auto-optimise-store = true;
 
   # Networking
-  networking.hostName = "karadeniz"; # Define your hostname.
+  networking.hostName = "karadeniz";
   networking.networkmanager.enable = true;
 
   # Locale
@@ -51,7 +51,7 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-    jack.enable = true;
+    # jack.enable = true;
     wireplumber.enable = true;
   };
   security.rtkit.enable = true;
@@ -88,19 +88,19 @@
   ];
 
   # Programs
-  programs.fish.enable = true;
   programs.firefox.enable = true;
+  programs.fish.enable = true;
   programs.localsend = {
     enable = true;
     openFirewall = true;
   };
   programs.nh = {
     enable = true;
-    flake = "/home/arda/nixos";
+    flake = "$HOME/nixos";
     clean = {
       enable = true;
       dates = "weekly";
-      extraArgs = "--keep-since 30d";
+      extraArgs = "--keep-since 14d";
     };
   };
 

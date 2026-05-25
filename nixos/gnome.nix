@@ -6,6 +6,7 @@
 
   services.gnome.core-apps.enable = false;
   environment.gnome.excludePackages = with pkgs; [
+    gnome-software
     gnome-tour
   ];
 
@@ -19,6 +20,7 @@
     gnome-tweaks
     loupe
     nautilus
+    snapshot
   ];
 
   xdg.terminal-exec = {
