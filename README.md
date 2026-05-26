@@ -12,9 +12,11 @@ My **NixOS** configuration, managed with **Flakes** and **Home Manager**.
 ├── nixos/
 │   ├── configuration.nix
 │   ├── gnome.nix
-│   └── hardware-configuration.nix
+│   ├── hardware-configuration.nix
+│   └── home-manager.nix
 ├── flake.lock
 ├── flake.nix
+├── .gitignore
 └── README.md
 ```
 
