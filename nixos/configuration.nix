@@ -5,6 +5,7 @@
     ./gnome.nix
     ./hardware-configuration.nix
     ./home-manager.nix
+    ./niri.nix
   ];
 
   # Boot

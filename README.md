@@ -13,7 +13,8 @@ My **NixOS** configuration, managed with **Flakes** and **Home Manager**.
 │   ├── configuration.nix
 │   ├── gnome.nix
 │   ├── hardware-configuration.nix
-│   └── home-manager.nix
+│   ├── home-manager.nix
+│   └── niri.nix
 ├── flake.lock
 ├── flake.nix
 ├── .gitignore
