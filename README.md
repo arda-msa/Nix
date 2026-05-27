@@ -23,4 +23,4 @@ My **NixOS** configuration, managed with **Flakes** and **Home Manager**.
 
 ## Notes
 
-- Config files (shell, editor, tools) are managed in a separate [dotfiles](https://github.com/arda-msa/dotfiles) repository and symlinked into place via `dotfiles.nix` using `mkOutOfStoreSymlink`.
+- Config files (shell, editor, tools) are managed in a separate [dotfiles](https://github.com/arda-msa/dotfiles/tree/nixos) repository and symlinked into place via `dotfiles.nix` using `mkOutOfStoreSymlink`.
