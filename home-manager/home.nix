@@ -1,7 +1,10 @@
 { pkgs, ... }:
 
 {
-  imports = [ ./dotfiles.nix ];
+  imports = [
+    ./dotfiles.nix
+  ];
+
   home.username = "arda";
   home.homeDirectory = "/home/arda";
   home.stateVersion = "25.11";
@@ -11,6 +14,12 @@
   programs.home-manager.enable = true;
 
   home.packages = with pkgs; [
+    # Appearance
+    adw-gtk3
+    morewaita-icon-theme
+    bibata-cursors
+    nwg-look
+
     # Editors
     micro
     neovim
