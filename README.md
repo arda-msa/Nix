@@ -11,10 +11,9 @@ My **NixOS** configuration, managed with **Flakes** and **Home Manager**.
 │   └── home.nix
 ├── nixos/
 │   ├── configuration.nix
-│   ├── gnome.nix
 │   ├── hardware-configuration.nix
 │   ├── home-manager.nix
-│   └── niri.nix
+│   └── packages.nix
 ├── flake.lock
 ├── flake.nix
 ├── .gitignore

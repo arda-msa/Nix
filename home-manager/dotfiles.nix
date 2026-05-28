@@ -21,5 +21,7 @@ in
   xdg.configFile."starship.toml".source = symlink "${dotfiles}/starship/.config/starship.toml";
   xdg.configFile."swaylock".source = symlink "${dotfiles}/swaylock/.config/swaylock";
   xdg.configFile."waybar".source = symlink "${dotfiles}/waybar/.config/waybar";
+  xdg.configFile."xdg-desktop-portal-termfilechooser".source =
+    symlink "${dotfiles}/xdg-desktop-portal-termfilechooser/.config/xdg-desktop-portal-termfilechooser";
   xdg.configFile."yazi".source = symlink "${dotfiles}/yazi/.config/yazi";
 }
