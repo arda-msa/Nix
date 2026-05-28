@@ -7,6 +7,7 @@ My **NixOS** configuration, managed with **Flakes** and **Home Manager**.
 ```
 ./
 ├── home-manager/
+│   ├── desktop-entries.nix
 │   ├── dotfiles.nix
 │   └── home.nix
 ├── nixos/
