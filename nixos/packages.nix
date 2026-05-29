@@ -3,6 +3,7 @@
 {
   environment.systemPackages = with pkgs; [
     # GUI Apps
+    foliate
     loupe
     nautilus
     obsidian
