@@ -10,9 +10,9 @@
     snapshot
 
     # GNOME Apps
-    dconf-editor
-    gnome-extension-manager
-    gnome-tweaks
+    # dconf-editor
+    # gnome-extension-manager
+    # gnome-tweaks
 
     # Wayland Stack
     brightnessctl

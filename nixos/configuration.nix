@@ -121,37 +121,36 @@
   };
 
   # ------------------
-  # Desktop: GNOME
+  # Desktop
   # ------------------
 
-  services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
-
-  services.gnome.core-apps.enable = false;
-
-  environment.gnome.excludePackages = with pkgs; [
-    gnome-software
-    gnome-tour
-  ];
-
-  xdg.terminal-exec = {
-    enable = true;
-    settings = {
-      GNOME = [ "com.mitchellh.ghostty.desktop" ];
-      default = [ "com.mitchellh.ghostty.desktop" ];
-    };
-  };
-
-  # ------------------
-  # Desktop: Niri
-  # ------------------
+  # services.displayManager.gdm.enable = true;
+  # services.desktopManager.gnome.enable = true;
+  #
+  # services.gnome.core-apps.enable = false;
+  #
+  # environment.gnome.excludePackages = with pkgs; [
+  #   gnome-software
+  #   gnome-tour
+  # ];
 
   programs.niri = {
     enable = true;
     # useNautilus = false;
   };
 
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.tuigreet}/bin/tuigreet --time --remember --remember-user-session";
+      };
+    };
+  };
+  systemd.user.services.niri.enableDefaultPath = false;
+
   security.polkit.enable = true;
+  services.gnome.gnome-keyring.enable = true;
   security.pam.services.swaylock = { };
 
   systemd.user.services.polkit-gnome = {
@@ -174,7 +173,7 @@
     xdg-desktop-portal-termfilechooser
   ];
 
-  xdg.portal.config.gnome."org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
+  # xdg.portal.config.gnome."org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
   xdg.portal.config.niri."org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
 
   # ----------------
@@ -227,17 +226,16 @@
   # ----------------
 
   services.fwupd.enable = true;
-  services.flatpak.enable = true;
+  services.gvfs.enable = true;
+  services.power-profiles-daemon.enable = true;
+  services.udisks2.enable = true;
+  services.upower.enable = true;
 
-  # services.gnome.gnome-keyring.enable = true;
-  # services.gvfs.enable = true;
+  # services.flatpak.enable = true;
   # services.libinput.enable = true;
-  # services.power-profiles-daemon.enable = true;
-  # services.udisks2.enable = true;
-  # services.upower.enable = true;
   # services.openssh.enable = true;
   # services.printing.enable = true;
 
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
-  system.stateVersion = "25.11";
+  system.stateVersion = "26.05";
 }

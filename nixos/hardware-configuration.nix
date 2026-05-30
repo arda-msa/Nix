@@ -18,7 +18,6 @@
     "xhci_pci"
     "ahci"
     "nvme"
-    "usbhid"
     "usb_storage"
     "sd_mod"
     "rtsx_usb_sdmmc"
@@ -28,12 +27,12 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/3604e3a8-5089-4722-a6f9-97a33c2cb497";
+    device = "/dev/disk/by-uuid/399e69b9-c241-453c-af02-e48dcbbc7ba5";
     fsType = "ext4";
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/CB50-6A43";
+    device = "/dev/disk/by-uuid/ED20-5A58";
     fsType = "vfat";
     options = [
       "fmask=0077"

@@ -9,7 +9,7 @@
   home = {
     username = "arda";
     homeDirectory = "/home/arda";
-    stateVersion = "25.11";
+    stateVersion = "26.05";
   };
 
   home.preferXdgDirectories = true;
