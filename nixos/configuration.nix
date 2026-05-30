@@ -227,6 +227,7 @@
   # ----------------
 
   services.fwupd.enable = true;
+  services.flatpak.enable = true;
 
   # services.gnome.gnome-keyring.enable = true;
   # services.gvfs.enable = true;
