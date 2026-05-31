@@ -14,5 +14,12 @@
 
   home.preferXdgDirectories = true;
 
+  xdg.enable = true;
+
+  xdg.userDirs = {
+    enable = true;
+    createDirectories = true;
+  };
+
   programs.home-manager.enable = true;
 }
