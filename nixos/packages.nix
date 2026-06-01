@@ -55,6 +55,7 @@
     fd
     fzf
     ripgrep
+    television
     starship
     zoxide
 
