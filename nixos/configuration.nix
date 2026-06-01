@@ -187,6 +187,7 @@
     wget
     nvd
     nix-output-monitor
+    nix-search-tv
     nix-your-shell
   ];
 
