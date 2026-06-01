@@ -217,6 +217,7 @@
     noto-fonts
     noto-fonts-color-emoji
     noto-fonts-cjk-sans
+    adwaita-fonts
     dejavu_fonts
     liberation_ttf
     nerd-fonts.jetbrains-mono
