@@ -13,7 +13,6 @@ My **NixOS** configuration, managed with **Flakes** and **Home Manager**.
 ├── nixos/
 │   ├── configuration.nix
 │   ├── hardware-configuration.nix
-│   ├── home-manager.nix
 │   └── packages.nix
 ├── flake.lock
 ├── flake.nix

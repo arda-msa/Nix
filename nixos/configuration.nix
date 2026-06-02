@@ -1,11 +1,23 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   imports = [
     ./hardware-configuration.nix
-    ./home-manager.nix
     ./packages.nix
+    inputs.home-manager.nixosModules.home-manager
   ];
+
+  # ----------------
+  # Home Manager
+  # ----------------
+
+  home-manager = {
+    useGlobalPkgs = true;
+    useUserPackages = true;
+    users.arda = import ../home-manager/home.nix;
+    backupFileExtension = "backup";
+    extraSpecialArgs = { inherit inputs; };
+  };
 
   # ----------------
   # Boot
