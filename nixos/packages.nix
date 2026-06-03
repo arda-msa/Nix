@@ -49,6 +49,7 @@
     stylua
 
     # Shell Utilities
+    atuin
     bat
     delta
     eza
