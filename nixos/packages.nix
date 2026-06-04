@@ -86,5 +86,7 @@
     # Fun
     cbonsai
     cmatrix
+    gitlogue
+    mapscii
   ];
 }
