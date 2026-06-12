@@ -148,7 +148,7 @@
 
   programs.niri = {
     enable = true;
-    # useNautilus = false;
+    useNautilus = false;
   };
 
   services.greetd = {
@@ -181,12 +181,12 @@
   # Portals
   # ------------------
 
-  xdg.portal.extraPortals = with pkgs; [
-    xdg-desktop-portal-termfilechooser
-  ];
-
-  # xdg.portal.config.gnome."org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
-  xdg.portal.config.niri."org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
+  # xdg.portal.extraPortals = with pkgs; [
+  #   xdg-desktop-portal-termfilechooser
+  # ];
+  #
+  # # xdg.portal.config.gnome."org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
+  # xdg.portal.config.niri."org.freedesktop.impl.portal.FileChooser" = [ "termfilechooser" ];
 
   # ----------------
   # Packages
