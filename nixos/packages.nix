@@ -68,6 +68,7 @@
     tree
     unzip
     yazi
+    zathura
 
     # System
     bluetui
