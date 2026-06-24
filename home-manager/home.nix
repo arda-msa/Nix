@@ -38,8 +38,6 @@ in
     "swaylock".source = symlink "${dotfiles}/swaylock/.config/swaylock";
     "television".source = symlink "${dotfiles}/television/.config/television";
     "waybar".source = symlink "${dotfiles}/waybar/.config/waybar";
-    # "xdg-desktop-portal-termfilechooser".source =
-    #   symlink "${dotfiles}/xdg-desktop-portal-termfilechooser/.config/xdg-desktop-portal-termfilechooser";
     "yazi".source = symlink "${dotfiles}/yazi/.config/yazi";
   };
 

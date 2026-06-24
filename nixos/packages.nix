@@ -9,11 +9,6 @@
     obsidian
     snapshot
 
-    # GNOME Apps
-    # dconf-editor
-    # gnome-extension-manager
-    # gnome-tweaks
-
     # Wayland Stack
     brightnessctl
     fuzzel
