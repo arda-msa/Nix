@@ -3,7 +3,7 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./packages.nix
+    ../../system
   ];
 
   # ----------------
@@ -13,7 +13,7 @@
   home-manager = {
     useGlobalPkgs = true;
     useUserPackages = true;
-    users.arda = import ../home-manager/home.nix;
+    users.arda = import ./home.nix;
     backupFileExtension = "backup";
     extraSpecialArgs = { inherit inputs; };
   };

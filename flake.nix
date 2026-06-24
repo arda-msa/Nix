@@ -17,7 +17,7 @@
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
-          ./nixos/configuration.nix
+          ./hosts/karadeniz
           inputs.home-manager.nixosModules.home-manager
         ];
       };

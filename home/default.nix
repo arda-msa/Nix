@@ -6,12 +6,6 @@ let
 in
 
 {
-  home = {
-    username = "arda";
-    homeDirectory = "/home/arda";
-    stateVersion = "26.05";
-  };
-
   home.preferXdgDirectories = true;
 
   xdg.enable = true;

@@ -6,12 +6,17 @@ My **NixOS** configuration, managed with **Flakes** and **Home Manager**.
 
 ```
 ./
-├── home-manager/
-│   └── home.nix
-├── nixos/
-│   ├── configuration.nix
-│   ├── hardware-configuration.nix
-│   └── packages.nix
+├── home/
+│   └── default.nix
+├── hosts/
+│   ├── akdeniz/
+│   │   └── default.nix
+│   └── karadeniz/
+│       ├── default.nix
+│       ├── hardware-configuration.nix
+│       └── home.nix
+├── system/
+│   └── default.nix
 ├── flake.lock
 ├── flake.nix
 ├── .gitignore
@@ -20,4 +25,4 @@ My **NixOS** configuration, managed with **Flakes** and **Home Manager**.
 
 ## Notes
 
-- Config files (shell, editor, tools) are managed in a separate [dotfiles](https://github.com/arda-msa/dotfiles/tree/nixos) repository and symlinked into place via `home.nix` using `mkOutOfStoreSymlink`.
+- Config files (shell, editor, tools) are managed in a separate [dotfiles](https://github.com/arda-msa/dotfiles/tree/nixos) repository and symlinked into place via **home-manager** using `mkOutOfStoreSymlink`.
