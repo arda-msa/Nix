@@ -1,21 +1,32 @@
-{
-  config,
-  pkgs,
-  ...
-}:
-
-let
-  symlink = config.lib.file.mkOutOfStoreSymlink;
-  dotfiles = "${config.home.homeDirectory}/nixos/home/mpv/config";
-in
+{ pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    mpv
-  ];
+  programs.mpv = {
+    enable = true;
 
-  xdg.configFile."mpv" = {
-    source = symlink dotfiles;
-    recursive = true;
+    scripts = with pkgs.mpvScripts; [
+      uosc
+      thumbfast
+    ];
+
+    config = {
+      # Video
+      vo = "gpu-next";
+      gpu-api = "auto";
+      hwdec = "vaapi";
+
+      # Subtitles
+      sub-auto = "fuzzy";
+      sub-font-size = 40;
+
+      # Quality of Life
+      keep-open = "yes";
+      save-position-on-quit = "yes";
+      autofit-larger = "90%x90%";
+
+      # Required for uosc
+      osd-bar = false;
+      border = false;
+    };
   };
 }
