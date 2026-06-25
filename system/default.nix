@@ -11,16 +11,16 @@
 
     # Wayland Stack
     brightnessctl
-    fuzzel
+    # fuzzel
     libnotify
-    mako
+    # mako
     playerctl
-    swaybg
-    swaylock
-    waybar
+    # swaybg
+    # swaylock
+    # waybar
     wl-clipboard
     xdg-utils
-    xwayland-satellite
+    # xwayland-satellite
 
     # Appearance
     adw-gtk3
@@ -29,47 +29,47 @@
     nwg-look
 
     # Editors
-    micro
-    neovim
+    # micro
+    # neovim
 
     # Terminal
-    ghostty
+    # ghostty
 
     # Development Tools
-    gcc
-    tree-sitter
-    lua-language-server
-    nixd
-    nixfmt
-    stylua
+    # gcc
+    # tree-sitter
+    # lua-language-server
+    # nixd
+    # nixfmt
+    # stylua
 
     # Shell Utilities
-    atuin
-    bat
-    delta
-    eza
-    fd
-    fzf
-    ripgrep
-    television
-    starship
-    zoxide
+    # atuin
+    # bat
+    # delta
+    # eza
+    # fd
+    # fzf
+    # ripgrep
+    # television
+    # starship
+    # zoxide
 
     # File Management
-    exiftool
-    jq
-    p7zip
-    sshfs
-    tree
+    # exiftool
+    # jq
+    # p7zip
+    # sshfs
+    # tree
     unzip
-    yazi
+    # yazi
     zathura
 
     # System
     bluetui
-    btop
-    fastfetch
-    lazygit
+    # btop
+    # fastfetch
+    # lazygit
     wiremix
     wev
 
@@ -77,7 +77,7 @@
     cava
     ffmpegthumbnailer
     imagemagick
-    mpv
+    # mpv
 
     # Fun
     cbonsai

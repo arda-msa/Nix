@@ -1,0 +1,7 @@
+// https://niri-wm.github.io/niri/Configuration:-Layer-Rules.html
+
+// Set the regular wallpaper on the backdrop
+layer-rule {
+    match namespace="^wallpaper$"
+    place-within-backdrop true
+}

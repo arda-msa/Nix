@@ -2,7 +2,7 @@
 
 My **NixOS** configuration, managed with **Flakes** and **Home Manager**.
 
-## Structure
+## Directory Structure
 
 ```
 ./
@@ -25,4 +25,4 @@ My **NixOS** configuration, managed with **Flakes** and **Home Manager**.
 
 ## Notes
 
-- Config files (shell, editor, tools) are managed in a separate [dotfiles](https://github.com/arda-msa/dotfiles/tree/nixos) repository and symlinked into place via **home-manager** using `mkOutOfStoreSymlink`.
+- Some of the config files (shell, editor, tools) are not managed with the relevant nix modules. They symlinked into place via **home-manager** using `mkOutOfStoreSymlink`.

@@ -148,7 +148,6 @@
       };
     };
   };
-  systemd.user.services.niri.enableDefaultPath = false;
 
   security.polkit.enable = true;
   services.gnome.gnome-keyring.enable = true;
@@ -173,8 +172,8 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    git
-    wget
+    # git
+    # wget
     nvd
     nix-output-monitor
     nix-search-tv

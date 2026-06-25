@@ -1,0 +1,24 @@
+[user]
+	name = arda-msa
+	email = arda.msa.dev@gmail.com
+
+[init]
+	defaultBranch = main
+
+[core]
+	editor = $EDITOR
+	pager = delta
+
+[commit]
+  template = ~/.config/git/message
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	navigate = true
+	side-by-side = true
+	line-numbers = true
+
+[merge]
+	conflictStyle = zdiff3
