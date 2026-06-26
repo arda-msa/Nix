@@ -1,21 +1,18 @@
-{
-  config,
-  pkgs,
-  ...
-}:
-
-let
-  symlink = config.lib.file.mkOutOfStoreSymlink;
-  dotfiles = "${config.home.homeDirectory}/nixos/home/starship/config";
-in
+{ ... }:
 
 {
-  home.packages = with pkgs; [
-    starship
-  ];
+  programs.starship = {
+    enable = true;
+    enableFishIntegration = false;
 
-  xdg.configFile."starship.toml" = {
-    source = symlink "${dotfiles}/starship.toml";
-    recursive = true;
+    settings = {
+      cmd_duration = {
+        format = "[$duration]($style) ";
+      };
+
+      directory = {
+        truncation_length = 8;
+      };
+    };
   };
 }
