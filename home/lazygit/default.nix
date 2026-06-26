@@ -1,21 +1,47 @@
-{
-  config,
-  pkgs,
-  ...
-}:
-
-let
-  symlink = config.lib.file.mkOutOfStoreSymlink;
-  dotfiles = "${config.home.homeDirectory}/nixos/home/lazygit/config";
-in
+{ ... }:
 
 {
-  home.packages = with pkgs; [
-    lazygit
-  ];
+  programs.lazygit = {
+    enable = true;
+    enableFishIntegration = false;
 
-  xdg.configFile."lazygit" = {
-    source = symlink dotfiles;
-    recursive = true;
+    settings = {
+      gui = {
+        theme = {
+          activeBorderColor = [
+            "white"
+            "bold"
+          ];
+          inactiveBorderColor = [
+            "white"
+          ];
+          searchingActiveBorderColor = [
+            "cyan"
+            "bold"
+          ];
+          optionsTextColor = [
+            "blue"
+          ];
+          selectedLineBgColor = [
+            "default"
+          ];
+          selectedRangeBgColor = [
+            "default"
+          ];
+          cherryPickedCommitBgColor = [
+            "cyan"
+          ];
+          cherryPickedCommitFgColor = [
+            "blue"
+          ];
+          unstagedChangesColor = [
+            "red"
+          ];
+          defaultFgColor = [
+            "default"
+          ];
+        };
+      };
+    };
   };
 }
