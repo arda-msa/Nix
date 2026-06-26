@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -20,6 +20,10 @@
     ./television
     ./waybar
     ./yazi
+  ];
+
+  home.packages = with pkgs; [
+    glow
   ];
 
   home.preferXdgDirectories = true;
