@@ -14,7 +14,7 @@ in
     starship
   ];
 
-  xdg.configFile."starship" = {
+  xdg.configFile."starship.toml" = {
     source = symlink "${dotfiles}/starship.toml";
     recursive = true;
   };
