@@ -1,21 +1,13 @@
-{
-  config,
-  pkgs,
-  ...
-}:
-
-let
-  symlink = config.lib.file.mkOutOfStoreSymlink;
-  dotfiles = "${config.home.homeDirectory}/nixos/home/btop/config";
-in
+{ ... }:
 
 {
-  home.packages = with pkgs; [
-    btop
-  ];
+  programs.btop = {
+    enable = true;
 
-  xdg.configFile."btop" = {
-    source = symlink dotfiles;
-    recursive = true;
+    settings = {
+      theme_background = false;
+      save_config_on_exit = false;
+      vim_keys = true;
+    };
   };
 }
