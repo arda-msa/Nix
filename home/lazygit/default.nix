@@ -7,6 +7,9 @@
 
     settings = {
       gui = {
+        nerdFontsVersion = "3";
+        showFileIcons = true;
+
         theme = {
           activeBorderColor = [
             "white"
