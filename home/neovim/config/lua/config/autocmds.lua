@@ -6,3 +6,24 @@
 --
 -- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
 -- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+
+local linenumbers = vim.api.nvim_create_augroup("LineNumbers", { clear = true })
+
+-- Absolute numbers in insert mode, relative in normal mode
+vim.api.nvim_create_autocmd("InsertEnter", {
+  group = linenumbers,
+  pattern = "*",
+  callback = function()
+    vim.opt.relativenumber = false
+  end,
+  desc = "Absolute line numbers in insert mode",
+})
+
+vim.api.nvim_create_autocmd("InsertLeave", {
+  group = linenumbers,
+  pattern = "*",
+  callback = function()
+    vim.opt.relativenumber = true
+  end,
+  desc = "Relative line numbers in normal mode",
+})
