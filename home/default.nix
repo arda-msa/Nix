@@ -4,7 +4,6 @@
   imports = [
     ./atuin
     ./btop
-    ./fastfetch
     ./fish
     ./fuzzel
     ./ghostty
