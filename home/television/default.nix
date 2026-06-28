@@ -1,21 +1,28 @@
-{
-  config,
-  pkgs,
-  ...
-}:
-
-let
-  symlink = config.lib.file.mkOutOfStoreSymlink;
-  dotfiles = "${config.home.homeDirectory}/nixos/home/television/config";
-in
+{ ... }:
 
 {
-  home.packages = with pkgs; [
-    television
-  ];
+  programs.television = {
+    enable = true;
+    enableFishIntegration = false;
 
-  xdg.configFile."television" = {
-    source = symlink dotfiles;
-    recursive = true;
+    channels = {
+      # TODO: Create customized channels suited to my needs.
+      # Currently, most channels are created imperatively via
+      # `tv update-channels`.
+
+      # `nix` channel is added for the nix-search-tv integration.
+      nix = {
+        metadata = {
+          name = "nix";
+          requirements = [ "nix-search-tv" ];
+        };
+        source = {
+          command = "nix-search-tv print";
+        };
+        preview = {
+          command = "nix-search-tv preview {}";
+        };
+      };
+    };
   };
 }
