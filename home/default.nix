@@ -23,6 +23,8 @@
 
   home.packages = with pkgs; [
     glow
+    jq
+    libnotify
   ];
 
   home.preferXdgDirectories = true;

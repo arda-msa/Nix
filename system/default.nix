@@ -12,7 +12,7 @@
     # Wayland Stack
     brightnessctl
     # fuzzel
-    libnotify
+    # libnotify
     # mako
     playerctl
     # swaybg
