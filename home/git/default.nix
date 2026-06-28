@@ -1,22 +1,31 @@
-{
-  config,
-  pkgs,
-  ...
-}:
-
-let
-  symlink = config.lib.file.mkOutOfStoreSymlink;
-  dotfiles = "${config.home.homeDirectory}/nixos/home/git/config";
-in
+{ ... }:
 
 {
-  home.packages = with pkgs; [
-    delta
-    git
-  ];
+  programs.git = {
+    enable = true;
 
-  xdg.configFile."git" = {
-    source = symlink dotfiles;
-    recursive = true;
+    settings = {
+      user = {
+        name = "arda-msa";
+        email = "arda.msa.dev@gmail.com";
+      };
+      init.defaultBranch = "main";
+      core.editor = "$EDITOR";
+
+      core.pager = "delta";
+      interactive.diffFilter = "delta --color-only";
+      merge.conflictstyle = "zdiff3";
+    };
+  };
+
+  programs.delta = {
+    enable = true;
+    enableGitIntegration = false;
+
+    options = {
+      line-numbers = true;
+      navigate = true;
+      side-by-side = true;
+    };
   };
 }
