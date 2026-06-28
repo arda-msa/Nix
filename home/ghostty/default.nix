@@ -1,21 +1,15 @@
-{
-  config,
-  pkgs,
-  ...
-}:
-
-let
-  symlink = config.lib.file.mkOutOfStoreSymlink;
-  dotfiles = "${config.home.homeDirectory}/nixos/home/ghostty/config";
-in
+{ ... }:
 
 {
-  home.packages = with pkgs; [
-    ghostty
-  ];
+  programs.ghostty = {
+    enable = true;
+    enableFishIntegration = false;
 
-  xdg.configFile."ghostty" = {
-    source = symlink dotfiles;
-    recursive = true;
+    settings = {
+      background-opacity = 0.9;
+      font-size = 12;
+      shell-integration-features = "ssh-env";
+      theme = "Catppuccin Mocha";
+    };
   };
 }
