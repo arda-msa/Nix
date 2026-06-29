@@ -3,7 +3,7 @@
 {
   programs.ghostty = {
     enable = true;
-    enableFishIntegration = false;
+    enableFishIntegration = true;
 
     settings = {
       background-opacity = 0.9;
