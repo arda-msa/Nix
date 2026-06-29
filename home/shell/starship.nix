@@ -3,7 +3,7 @@
 {
   programs.starship = {
     enable = true;
-    enableFishIntegration = false;
+    enableFishIntegration = true;
 
     settings = {
       cmd_duration = {

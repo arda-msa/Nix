@@ -2,9 +2,7 @@
 
 {
   imports = [
-    ./atuin
     ./btop
-    ./fish
     ./fuzzel
     ./ghostty
     ./git
@@ -14,9 +12,8 @@
     ./mpv
     ./neovim
     ./niri
-    ./starship
+    ./shell
     ./swaylock
-    ./television
     ./waybar
     ./yazi
   ];
