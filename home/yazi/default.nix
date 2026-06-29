@@ -10,7 +10,7 @@ in
 {
   programs.yazi = {
     enable = true;
-    enableFishIntegration = false;
+    enableFishIntegration = true;
 
     settings = {
       mgr = {
