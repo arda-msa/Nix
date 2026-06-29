@@ -3,7 +3,7 @@
 {
   programs.lazygit = {
     enable = true;
-    enableFishIntegration = false;
+    enableFishIntegration = true;
 
     settings = {
       gui = {
