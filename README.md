@@ -2,11 +2,44 @@
 
 My **NixOS** configuration, managed with **Flakes** and **Home Manager**.
 
-## Directory Structure
+## Structure
 
 ```
 ./
+├── config/
+│   ├── niri/
+│   ├── nvim/
+│   └── waybar/
 ├── home/
+│   ├── cli/
+│   │   ├── atuin.nix
+│   │   ├── default.nix
+│   │   ├── eza.nix
+│   │   ├── fish.nix
+│   │   ├── fzf.nix
+│   │   ├── git.nix
+│   │   ├── nix-search-tv.nix
+│   │   ├── nix-your-shell.nix
+│   │   ├── starship.nix
+│   │   ├── television.nix
+│   │   └── zoxide.nix
+│   ├── desktop/
+│   │   ├── default.nix
+│   │   ├── fuzzel.nix
+│   │   ├── mako.nix
+│   │   ├── niri.nix
+│   │   ├── swaylock.nix
+│   │   └── waybar.nix
+│   ├── gui/
+│   │   ├── default.nix
+│   │   ├── ghostty.nix
+│   │   └── mpv.nix
+│   ├── tui/
+│   │   ├── btop.nix
+│   │   ├── default.nix
+│   │   ├── lazygit.nix
+│   │   ├── neovim.nix
+│   │   └── yazi.nix
 │   └── default.nix
 ├── hosts/
 │   ├── akdeniz/
@@ -22,7 +55,3 @@ My **NixOS** configuration, managed with **Flakes** and **Home Manager**.
 ├── .gitignore
 └── README.md
 ```
-
-## Notes
-
-- Some of the config files (shell, editor, tools) are not managed with the relevant nix modules. They symlinked into place via **home-manager** using `mkOutOfStoreSymlink`.

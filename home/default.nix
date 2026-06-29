@@ -2,19 +2,10 @@
 
 {
   imports = [
-    ./btop
-    ./fuzzel
-    ./ghostty
-    ./git
-    ./lazygit
-    ./mako
-    ./mpv
-    ./neovim
-    ./niri
-    ./shell
-    ./swaylock
-    ./waybar
-    ./yazi
+    ./cli
+    ./desktop
+    ./gui
+    ./tui
   ];
 
   home.packages = with pkgs; [
