@@ -6,7 +6,7 @@
 
 let
   symlink = config.lib.file.mkOutOfStoreSymlink;
-  dotfiles = "${config.home.homeDirectory}/nixos/home/niri/config";
+  dotfiles = "${config.home.homeDirectory}/nixos/config/niri";
 in
 
 {

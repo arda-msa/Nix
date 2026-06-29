@@ -6,7 +6,7 @@
 
 let
   symlink = config.lib.file.mkOutOfStoreSymlink;
-  dotfiles = "${config.home.homeDirectory}/nixos/home/neovim/config";
+  dotfiles = "${config.home.homeDirectory}/nixos/config/nvim";
 in
 
 {
