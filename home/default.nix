@@ -8,7 +8,6 @@
     ./git
     ./lazygit
     ./mako
-    ./micro
     ./mpv
     ./neovim
     ./niri
