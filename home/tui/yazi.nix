@@ -8,6 +8,10 @@ let
 in
 
 {
+  home.packages = with pkgs; [
+    exiftool
+  ];
+
   programs.yazi = {
     enable = true;
     enableFishIntegration = true;
@@ -143,6 +147,14 @@ in
           ];
           run = ''shell -- ya emit cd "$(git rev-parse --show-toplevel)"'';
           desc = "Go to git repo root";
+        }
+        {
+          on = [
+            "g"
+            "w"
+          ];
+          run = "cd ~/work";
+          desc = "Go to ~/work";
         }
         {
           on = [
