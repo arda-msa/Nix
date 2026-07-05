@@ -51,20 +51,34 @@ My **NixOS** configuration, managed with **Flakes** and **Home Manager**.
 │       └── home.nix
 ├── system/
 │   ├── core/
-│   │   ├── audio.nix
 │   │   ├── boot.nix
 │   │   ├── default.nix
 │   │   ├── fonts.nix
-│   │   └── locale.nix
+│   │   ├── locale.nix
+│   │   ├── nix.nix
+│   │   └── shell.nix
+│   ├── desktop/
+│   │   ├── default.nix
+│   │   ├── niri.nix
+│   │   ├── polkit-agent.nix
+│   │   └── tuigreet.nix
 │   ├── hardware/
 │   │   ├── bluetooth.nix
 │   │   ├── default.nix
+│   │   ├── fwupd.nix
 │   │   ├── intel.nix
 │   │   └── zram.nix
 │   ├── programs/
 │   │   ├── default.nix
+│   │   ├── firefox.nix
 │   │   ├── localsend.nix
 │   │   └── nh.nix
+│   ├── services/
+│   │   ├── audio.nix
+│   │   ├── default.nix
+│   │   ├── network.nix
+│   │   ├── power.nix
+│   │   └── storage.nix
 │   ├── virtualisation/
 │   │   ├── default.nix
 │   │   └── libvirt.nix
