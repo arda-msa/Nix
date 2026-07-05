@@ -49,6 +49,9 @@ My **NixOS** configuration, managed with **Flakes** and **Home Manager**.
 │       ├── hardware-configuration.nix
 │       └── home.nix
 ├── system/
+│   ├── virtualisation/
+│   │   ├── default.nix
+│   │   └── libvirt.nix
 │   └── default.nix
 ├── flake.lock
 ├── flake.nix
