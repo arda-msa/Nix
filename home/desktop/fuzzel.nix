@@ -9,7 +9,7 @@
         font = "JetBrainsMono Nerd Font:size=16";
         dpi-aware = false;
         placeholder = "Search...";
-        prompt = "❯ ";
+        prompt = ''"❯ "'';
         icons-enabled = true;
         match-mode = "fzf";
         sort-result = true;
