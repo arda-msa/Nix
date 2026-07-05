@@ -2,6 +2,7 @@
 
 {
   imports = [
-    ./configuration.nix
+    ./localsend.nix
+    ./nh.nix
   ];
 }

@@ -45,10 +45,26 @@ My **NixOS** configuration, managed with **Flakes** and **Home Manager**.
 │   ├── akdeniz/
 │   │   └── default.nix
 │   └── karadeniz/
+│       ├── configuration.nix
 │       ├── default.nix
 │       ├── hardware-configuration.nix
 │       └── home.nix
 ├── system/
+│   ├── core/
+│   │   ├── audio.nix
+│   │   ├── boot.nix
+│   │   ├── default.nix
+│   │   ├── fonts.nix
+│   │   └── locale.nix
+│   ├── hardware/
+│   │   ├── bluetooth.nix
+│   │   ├── default.nix
+│   │   ├── intel.nix
+│   │   └── zram.nix
+│   ├── programs/
+│   │   ├── default.nix
+│   │   ├── localsend.nix
+│   │   └── nh.nix
 │   ├── virtualisation/
 │   │   ├── default.nix
 │   │   └── libvirt.nix
