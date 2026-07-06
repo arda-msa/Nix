@@ -1,6 +1,25 @@
 { pkgs, ... }:
 
 {
+  home.packages = with pkgs; [
+    bat
+    fd
+    ripgrep
+    tree
+  ];
+
+  home.sessionVariables = {
+    MANPAGER = "sh -c 'col -bx | bat -l man -p'";
+    MANROFFOPT = "-c";
+  };
+
+  home.shellAliases = {
+    "..." = "cd ../..";
+    "grep" = "grep --color=auto";
+    "vim" = "nvim";
+    "ltree" = ''tree -a -F -I ".git" -L 4 --dirsfirst'';
+  };
+
   programs.fish = {
     enable = true;
 

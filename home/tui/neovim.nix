@@ -21,6 +21,12 @@ in
     nixfmt
   ];
 
+  home.sessionVariables = {
+    EDITOR = "nvim";
+    VISUAL = "nvim";
+    # MANPAGER = "nvim +Man!";
+  };
+
   xdg.configFile."nvim" = {
     source = symlink dotfiles;
     recursive = true;
