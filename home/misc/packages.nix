@@ -9,6 +9,11 @@
     obsidian
     snapshot
 
+    # Libre Office
+    libreoffice
+    hunspellDicts.en_US
+    hunspellDicts.tr_TR
+
     # CLI
     bluetui
     brightnessctl
