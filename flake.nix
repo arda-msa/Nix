@@ -11,15 +11,43 @@
   };
 
   outputs =
-    { self, nixpkgs, ... }@inputs:
     {
-      nixosConfigurations.karadeniz = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./hosts/karadeniz
-          inputs.home-manager.nixosModules.home-manager
-        ];
+      self,
+      nixpkgs,
+      home-manager,
+      ...
+    }@inputs:
+
+    let
+      username = "arda";
+
+      mkHost =
+        hostname:
+        nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs hostname username; };
+          modules = [
+            ./hosts/${hostname}
+            ./system
+
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.${username} = import ./hosts/${hostname}/home.nix;
+                extraSpecialArgs = { inherit inputs hostname username; };
+                backupFileExtension = "backup";
+                sharedModules = [ ./home ];
+              };
+            }
+          ];
+        };
+    in
+
+    {
+      nixosConfigurations = {
+        karadeniz = mkHost "karadeniz";
       };
     };
 }

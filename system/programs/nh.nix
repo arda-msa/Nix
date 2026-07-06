@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ username, pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -8,6 +8,6 @@
 
   programs.nh = {
     enable = true;
-    flake = "$HOME/nixos";
+    flake = "/home/${username}/nixos";
   };
 }

@@ -1,24 +1,15 @@
-{ inputs, pkgs, ... }:
+{ hostname, username, ... }:
 
 {
   imports = [
     ./hardware-configuration.nix
-    ../../system
   ];
 
-  home-manager = {
-    useGlobalPkgs = true;
-    useUserPackages = true;
-    users.arda = import ./home.nix;
-    backupFileExtension = "backup";
-    extraSpecialArgs = { inherit inputs; };
-  };
+  networking.hostName = "${hostname}";
 
-  networking.hostName = "karadeniz";
-
-  users.users.arda = {
+  users.users.${username} = {
     isNormalUser = true;
-    description = "Arda";
+    description = "${username}";
     extraGroups = [
       "networkmanager"
       "wheel"

@@ -1,13 +1,9 @@
-{ ... }:
+{ username, ... }:
 
 {
-  imports = [
-    ../../home
-  ];
-
   home = {
-    username = "arda";
-    homeDirectory = "/home/arda";
+    username = "${username}";
+    homeDirectory = "/home/${username}";
     stateVersion = "26.05";
   };
 }

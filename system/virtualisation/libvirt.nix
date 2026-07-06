@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ username, pkgs, ... }:
 
 {
   virtualisation.libvirtd = {
@@ -11,7 +11,7 @@
 
   programs.virt-manager.enable = true;
 
-  users.users.arda.extraGroups = [
+  users.users.${username}.extraGroups = [
     "libvirtd"
     "kvm"
   ];
