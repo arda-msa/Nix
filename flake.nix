@@ -27,7 +27,7 @@
           system = "x86_64-linux";
           specialArgs = { inherit inputs hostname username; };
           modules = [
-            ./hosts/${hostname}
+            ./hosts/${hostname}/configuration.nix
             ./system
 
             home-manager.nixosModules.home-manager

@@ -13,7 +13,6 @@ My **NixOS** configuration, managed with **Flakes** and **Home Manager**.
 ├── home/
 │   ├── cli/
 │   │   ├── atuin.nix
-│   │   ├── default.nix
 │   │   ├── eza.nix
 │   │   ├── fish.nix
 │   │   ├── fzf.nix
@@ -24,63 +23,56 @@ My **NixOS** configuration, managed with **Flakes** and **Home Manager**.
 │   │   ├── television.nix
 │   │   └── zoxide.nix
 │   ├── desktop/
-│   │   ├── default.nix
 │   │   ├── fuzzel.nix
 │   │   ├── mako.nix
 │   │   ├── niri.nix
 │   │   ├── swaylock.nix
 │   │   └── waybar.nix
 │   ├── gui/
-│   │   ├── default.nix
 │   │   ├── ghostty.nix
 │   │   └── mpv.nix
+│   ├── misc/
+│   │   ├── packages.nix
+│   │   └── xdg.nix
 │   ├── tui/
 │   │   ├── btop.nix
-│   │   ├── default.nix
 │   │   ├── lazygit.nix
 │   │   ├── neovim.nix
 │   │   └── yazi.nix
 │   └── default.nix
 ├── hosts/
 │   ├── akdeniz/
-│   │   └── default.nix
+│   │   └── configuration.nix
 │   └── karadeniz/
 │       ├── configuration.nix
-│       ├── default.nix
 │       ├── hardware-configuration.nix
 │       └── home.nix
 ├── system/
 │   ├── core/
 │   │   ├── boot.nix
-│   │   ├── default.nix
 │   │   ├── fonts.nix
 │   │   ├── locale.nix
 │   │   ├── nix.nix
 │   │   └── shell.nix
 │   ├── desktop/
-│   │   ├── default.nix
 │   │   ├── niri.nix
 │   │   ├── polkit-agent.nix
 │   │   └── tuigreet.nix
 │   ├── hardware/
 │   │   ├── bluetooth.nix
-│   │   ├── default.nix
 │   │   ├── fwupd.nix
 │   │   ├── intel.nix
 │   │   └── zram.nix
 │   ├── programs/
-│   │   ├── default.nix
 │   │   ├── firefox.nix
 │   │   ├── localsend.nix
 │   │   └── nh.nix
 │   ├── services/
 │   │   ├── audio.nix
-│   │   ├── default.nix
 │   │   ├── network.nix
 │   │   ├── power.nix
 │   │   └── storage.nix
 │   ├── virtualisation/
-│   │   ├── default.nix
 │   │   └── libvirt.nix
 │   └── default.nix
 ├── flake.lock
