@@ -11,7 +11,23 @@ My **NixOS** configuration, managed with **Flakes** and **Home Manager**.
 │   ├── nvim/
 │   └── waybar/
 ├── home/
-│   ├── cli/
+│   ├── core/
+│   │   ├── packages.nix
+│   │   └── xdg.nix
+│   ├── desktop/
+│   │   ├── fuzzel.nix
+│   │   ├── mako.nix
+│   │   ├── niri.nix
+│   │   ├── swaylock.nix
+│   │   └── waybar.nix
+│   ├── programs/
+│   │   ├── btop.nix
+│   │   ├── ghostty.nix
+│   │   ├── lazygit.nix
+│   │   ├── mpv.nix
+│   │   ├── neovim.nix
+│   │   └── yazi.nix
+│   ├── shell/
 │   │   ├── atuin.nix
 │   │   ├── eza.nix
 │   │   ├── fish.nix
@@ -22,23 +38,6 @@ My **NixOS** configuration, managed with **Flakes** and **Home Manager**.
 │   │   ├── starship.nix
 │   │   ├── television.nix
 │   │   └── zoxide.nix
-│   ├── desktop/
-│   │   ├── fuzzel.nix
-│   │   ├── mako.nix
-│   │   ├── niri.nix
-│   │   ├── swaylock.nix
-│   │   └── waybar.nix
-│   ├── gui/
-│   │   ├── ghostty.nix
-│   │   └── mpv.nix
-│   ├── misc/
-│   │   ├── packages.nix
-│   │   └── xdg.nix
-│   ├── tui/
-│   │   ├── btop.nix
-│   │   ├── lazygit.nix
-│   │   ├── neovim.nix
-│   │   └── yazi.nix
 │   └── default.nix
 ├── hosts/
 │   ├── akdeniz/
