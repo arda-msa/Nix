@@ -28,7 +28,7 @@
           specialArgs = { inherit inputs hostname username; };
           modules = [
             ./hosts/${hostname}/configuration.nix
-            ./system
+            ./modules/nixos
 
             home-manager.nixosModules.home-manager
             {
@@ -38,7 +38,7 @@
                 users.${username} = import ./hosts/${hostname}/home.nix;
                 extraSpecialArgs = { inherit inputs hostname username; };
                 backupFileExtension = "backup";
-                sharedModules = [ ./home ];
+                sharedModules = [ ./modules/home-manager ];
               };
             }
           ];

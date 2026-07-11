@@ -2,7 +2,7 @@
 
 
 spawn-at-startup "waybar"
-spawn-at-startup "swaybg" "-i" "/home/arda/wallpapers/cherry-blossom-train.jpg"
+spawn-at-startup "swaybg" "-i" "/home/arda/nixos/wallpapers/cherry-blossom-train.jpg"
 spawn-at-startup "mako"
 // spawn-at-startup "/usr/lib/mate-polkit/polkit-mate-authentication-agent-1"
 // spawn-at-startup "dms" "run"
