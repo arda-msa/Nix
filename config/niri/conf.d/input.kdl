@@ -3,7 +3,7 @@
 input {
     keyboard {
         xkb {
-            // layout "us"
+            layout "tr"
             // variant "colemak_dh_ortho"
             // options "compose:ralt,ctrl:nocaps"
             // model ""
