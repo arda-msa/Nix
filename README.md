@@ -1,36 +1,20 @@
 # NixOS
 
-My **NixOS** configuration, managed with **Flakes** and **Home Manager**.
+My **NixOS** configuration, managed with **Homa Manager** and **Flakes**.
 
 ## Structure
 
 ```
 ./
 ├── config/
-│   ├── niri/
-│   ├── nvim/
-│   └── waybar/
+│   └── nvim/
 ├── hosts/
-│   ├── akdeniz/
 │   └── karadeniz/
-├── modules/
-│   ├── home-manager/
-│   │   ├── core/
-│   │   ├── desktop/
-│   │   ├── programs/
-│   │   ├── shell/
-│   │   └── default.nix
-│   └── nixos/
-│       ├── core/
-│       ├── desktop/
-│       ├── hardware/
-│       ├── programs/
-│       ├── services/
-│       ├── virtualisation/
-│       └── default.nix
-├── wallpapers/
+│       ├── configuration.nix
+│       ├── gnome.nix
+│       ├── hardware-configuration.nix
+│       └── home.nix
 ├── flake.lock
 ├── flake.nix
-├── .gitignore
 └── README.md
 ```
