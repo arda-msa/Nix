@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ lib, pkgs, ... }:
 
 {
 
@@ -6,6 +6,7 @@
   services.displayManager.gdm.enable = true;
 
   services.gnome.core-apps.enable = false;
+  services.gnome.evolution-data-server.enable = lib.mkForce false;
   environment.gnome.excludePackages = [ pkgs.gnome-tour ];
 
   environment.systemPackages = with pkgs; [
