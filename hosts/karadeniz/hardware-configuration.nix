@@ -28,12 +28,12 @@
   boot.extraModulePackages = [ ];
 
   fileSystems."/" = {
-    device = "/dev/disk/by-uuid/fc1da004-7f2a-4e72-bae8-1d3a9ad8531f";
+    device = "/dev/disk/by-uuid/26071ed4-b756-48fc-a48a-d60320d2bd03";
     fsType = "ext4";
   };
 
   fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/A16B-9BF1";
+    device = "/dev/disk/by-uuid/3380-4056";
     fsType = "vfat";
     options = [
       "fmask=0077"
