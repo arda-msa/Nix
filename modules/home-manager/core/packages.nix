@@ -7,5 +7,6 @@
 
     ffmpeg
     yt-dlp
+    gimp
   ];
 }
