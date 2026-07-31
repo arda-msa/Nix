@@ -3,10 +3,13 @@
 {
   home.packages = with pkgs; [
     gitlogue
+    glow
+    jq
     wiremix
 
     ffmpeg
-    yt-dlp
     gimp
+    imagemagick
+    yt-dlp
   ];
 }
