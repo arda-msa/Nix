@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   home.packages = with pkgs; [
@@ -21,6 +21,18 @@
 
       preview = {
         wrap = "no";
+      };
+    };
+
+    flavors = {
+      catppuccin-mocha = "${inputs.yazi-flavors}/catppuccin-mocha.yazi";
+      catppuccin-latte = "${inputs.yazi-flavors}/catppuccin-latte.yazi";
+    };
+
+    theme = {
+      flavor = {
+        dark = "catppuccin-mocha";
+        light = "catppuccin-latte";
       };
     };
 

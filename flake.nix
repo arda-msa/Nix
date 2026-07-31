@@ -8,6 +8,11 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    yazi-flavors = {
+      url = "github:yazi-rs/flavors";
+      flake = false;
+    };
   };
 
   outputs =
@@ -15,6 +20,7 @@
       self,
       nixpkgs,
       home-manager,
+      yazi-flavors,
       ...
     }@inputs:
 
