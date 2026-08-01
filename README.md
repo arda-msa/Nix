@@ -8,11 +8,6 @@ My **NixOS** configuration, managed with **Homa Manager** and **Flakes**.
 ./
 ├── config/
 │   └── nvim/
-├── hosts/
-│   └── karadeniz/
-│       ├── configuration.nix
-│       ├── hardware-configuration.nix
-│       └── home.nix
 ├── modules/
 │   ├── home-manager/
 │   │   ├── core/
@@ -23,6 +18,7 @@ My **NixOS** configuration, managed with **Homa Manager** and **Flakes**.
 │   │   │   ├── ghostty.nix
 │   │   │   ├── git.nix
 │   │   │   ├── lazygit.nix
+│   │   │   ├── mpv.nix
 │   │   │   ├── neovim.nix
 │   │   │   ├── nh.nix
 │   │   │   └── yazi.nix
@@ -30,6 +26,11 @@ My **NixOS** configuration, managed with **Homa Manager** and **Flakes**.
 │   │   │   ├── fish.nix
 │   │   │   └── tools.nix
 │   │   └── default.nix
+│   ├── hosts/
+│   │   └── karadeniz/
+│   │       ├── configuration.nix
+│   │       ├── hardware-configuration.nix
+│   │       └── home.nix
 │   └── nixos/
 │       ├── core/
 │       │   ├── boot.nix

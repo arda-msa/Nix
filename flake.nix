@@ -33,7 +33,7 @@
           system = "x86_64-linux";
           specialArgs = { inherit inputs hostname username; };
           modules = [
-            ./hosts/${hostname}/configuration.nix
+            ./modules/hosts/${hostname}/configuration.nix
             ./modules/nixos
 
             home-manager.nixosModules.home-manager
@@ -41,7 +41,7 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                users.${username} = import ./hosts/${hostname}/home.nix;
+                users.${username} = import ./modules/hosts/${hostname}/home.nix;
                 extraSpecialArgs = { inherit inputs hostname username; };
                 backupFileExtension = "backup";
                 sharedModules = [ ./modules/home-manager ];
