@@ -1,23 +1,31 @@
-{ self, ... }:
+{ self, inputs, ... }:
 
 {
-  flake.modules.nixos.karadeniz = { ... }: {
+  flake.nixosConfigurations.karadeniz = inputs.nixpkgs.lib.nixosSystem {
+    modules = [
+      self.modules.nixos.karadeniz
+      inputs.home-manager.nixosModules.home-manager
+      {
+        home-manager = {
+          useGlobalPkgs = true;
+          useUserPackages = true;
+          backupFileExtension = "bak";
+          users.arda = self.modules.homeManager.karadeniz;
+        };
+      }
+    ];
+  };
+
+  flake.modules.nixos.karadeniz = { pkgs, ... }: {
     imports = with self.modules.nixos; [
       karadeniz-hardware
 
-      boot
-      fonts
-      locale
-      network
-      nix
-      shell
+      base
+      bluetooth
       gnome
-      git
       firefox
       localsend
-      bluetooth
       intel
-      zram
     ];
 
     networking.hostName = "karadeniz";
@@ -31,7 +39,24 @@
       ];
     };
 
+    users.defaultUserShell = pkgs.fish;
+
     # https://wiki.nixos.org/wiki/FAQ/When_do_I_update_stateVersion
     system.stateVersion = "26.05";
+  };
+
+  flake.modules.homeManager.karadeniz = {
+    home = {
+      username = "arda";
+      homeDirectory = "/home/arda";
+      stateVersion = "26.05";
+    };
+
+    imports = with self.modules.homeManager; [
+      base
+      ghostty
+      mpv
+      neovim
+    ];
   };
 }

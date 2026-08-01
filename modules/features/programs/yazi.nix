@@ -1,7 +1,7 @@
-{ ... }:
+{ inputs, ... }:
 
 {
-  flake.modules.homeManager.yazi = { inputs, pkgs, ... }: {
+  flake.modules.homeManager.base = { pkgs, ... }: {
     home.packages = with pkgs; [
       exiftool
     ];

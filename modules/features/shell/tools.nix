@@ -1,7 +1,5 @@
-{ ... }:
-
 {
-  flake.modules.homeManager.tools = { pkgs, ... }: {
+  flake.modules.homeManager.base = { pkgs, ... }: {
     home.packages = with pkgs; [
       bat
       fd

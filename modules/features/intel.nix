@@ -1,5 +1,3 @@
-{ ... }:
-
 {
   flake.modules.nixos.intel = { pkgs, ... }: {
     # https://wiki.nixos.org/wiki/Intel_Graphics

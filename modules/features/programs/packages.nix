@@ -1,7 +1,5 @@
-{ ... }:
-
 {
-  flake.modules.homeManager.packages = { pkgs, ... }: {
+  flake.modules.homeManager.base = { pkgs, ... }: {
     home.packages = with pkgs; [
       gitlogue
       glow

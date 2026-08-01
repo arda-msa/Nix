@@ -1,5 +1,3 @@
-{ ... }:
-
 {
   flake.modules.homeManager.neovim = { config, pkgs, ... }: {
     home.packages = with pkgs; [
