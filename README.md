@@ -1,52 +1,50 @@
 # NixOS
 
-My **NixOS** configuration, managed with **Homa Manager** and **Flakes**.
+My **NixOS** configuration, managed with **Homa Manager** and **Flakes**, following the **Dendritic Pattern**.
 
 ## Structure
 
 ```
 ./
+./
 ├── config/
 │   └── nvim/
 ├── modules/
-│   ├── home-manager/
-│   │   ├── core/
-│   │   │   ├── packages.nix
-│   │   │   └── xdg.nix
+│   ├── features/
+│   │   ├── desktop/
+│   │   │   └── gnome.nix
 │   │   ├── programs/
 │   │   │   ├── btop.nix
+│   │   │   ├── firefox.nix
 │   │   │   ├── ghostty.nix
 │   │   │   ├── git.nix
 │   │   │   ├── lazygit.nix
+│   │   │   ├── localsend.nix
 │   │   │   ├── mpv.nix
 │   │   │   ├── neovim.nix
 │   │   │   ├── nh.nix
+│   │   │   ├── packages.nix
 │   │   │   └── yazi.nix
 │   │   ├── shell/
 │   │   │   ├── fish.nix
+│   │   │   ├── shell.nix
 │   │   │   └── tools.nix
-│   │   └── default.nix
+│   │   ├── bluetooth.nix
+│   │   ├── boot.nix
+│   │   ├── fonts.nix
+│   │   ├── intel.nix
+│   │   ├── locale.nix
+│   │   ├── network.nix
+│   │   ├── nix.nix
+│   │   ├── xdg.nix
+│   │   └── zram.nix
 │   ├── hosts/
 │   │   └── karadeniz/
 │   │       ├── configuration.nix
+│   │       ├── default.nix
 │   │       ├── hardware-configuration.nix
 │   │       └── home.nix
-│   └── nixos/
-│       ├── core/
-│       │   ├── boot.nix
-│       │   ├── fonts.nix
-│       │   ├── locale.nix
-│       │   ├── network.nix
-│       │   ├── nix.nix
-│       │   └── shell.nix
-│       ├── desktop/
-│       │   ├── gnome.nix
-│       │   └── programs.nix
-│       ├── hardware/
-│       │   ├── bluetooth.nix
-│       │   ├── intel.nix
-│       │   └── zram.nix
-│       └── default.nix
+│   └── flake-parts.nix
 ├── flake.lock
 ├── flake.nix
 └── README.md

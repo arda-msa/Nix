@@ -13,47 +13,10 @@
       url = "github:yazi-rs/flavors";
       flake = false;
     };
+
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    import-tree.url = "github:vic/import-tree";
   };
 
-  outputs =
-    {
-      self,
-      nixpkgs,
-      home-manager,
-      yazi-flavors,
-      ...
-    }@inputs:
-
-    let
-      username = "arda";
-
-      mkHost =
-        hostname:
-        nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
-          specialArgs = { inherit inputs hostname username; };
-          modules = [
-            ./modules/hosts/${hostname}/configuration.nix
-            ./modules/nixos
-
-            home-manager.nixosModules.home-manager
-            {
-              home-manager = {
-                useGlobalPkgs = true;
-                useUserPackages = true;
-                users.${username} = import ./modules/hosts/${hostname}/home.nix;
-                extraSpecialArgs = { inherit inputs hostname username; };
-                backupFileExtension = "backup";
-                sharedModules = [ ./modules/home-manager ];
-              };
-            }
-          ];
-        };
-    in
-
-    {
-      nixosConfigurations = {
-        karadeniz = mkHost "karadeniz";
-      };
-    };
+  outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
 }
