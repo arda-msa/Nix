@@ -7,6 +7,10 @@
     jq
     wiremix
 
+    libreoffice
+    hunspellDicts.en_US
+    hunspellDicts.tr_TR
+
     ffmpeg
     gimp
     imagemagick
