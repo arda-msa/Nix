@@ -4,21 +4,13 @@
   flake.nixosConfigurations.karadeniz = inputs.nixpkgs.lib.nixosSystem {
     modules = [
       self.modules.nixos.karadeniz
-      inputs.home-manager.nixosModules.home-manager
-      {
-        home-manager = {
-          useGlobalPkgs = true;
-          useUserPackages = true;
-          backupFileExtension = "bak";
-          users.arda = self.modules.homeManager.karadeniz;
-        };
-      }
     ];
   };
 
   flake.modules.nixos.karadeniz = { pkgs, ... }: {
     imports = with self.modules.nixos; [
       karadeniz-hardware
+      homeManager
 
       base
       bluetooth
@@ -40,6 +32,8 @@
     };
 
     users.defaultUserShell = pkgs.fish;
+
+    home-manager.users.arda = self.modules.homeManager.karadeniz;
 
     # https://wiki.nixos.org/wiki/FAQ/When_do_I_update_stateVersion
     system.stateVersion = "26.05";
