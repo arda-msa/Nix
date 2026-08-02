@@ -1,17 +1,11 @@
 {
   flake.modules.homeManager.base = { pkgs, ... }: {
     home.packages = with pkgs; [
-      bat
       fd
       fzf
       ripgrep
       tree
     ];
-
-    home.sessionVariables = {
-      MANPAGER = "sh -c 'col -bx | bat -l man -p'";
-      MANROFFOPT = "-c";
-    };
 
     programs.eza = {
       enable = true;
