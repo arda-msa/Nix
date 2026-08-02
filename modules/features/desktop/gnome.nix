@@ -10,6 +10,7 @@
     environment.systemPackages = with pkgs; [
       celluloid
       dconf-editor
+      ffmpegthumbnailer
       gnome-calculator
       gnome-extension-manager
       gnome-tweaks
