@@ -13,10 +13,8 @@
       homeManager
 
       base
-      bluetooth
+      graphical
       gnome
-      firefox
-      localsend
       intel
     ];
 
@@ -48,9 +46,7 @@
 
     imports = with self.modules.homeManager; [
       base
-      ghostty
-      mpv
-      neovim
+      graphical
     ];
   };
 }

@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.neovim = { config, pkgs, ... }: {
+  flake.modules.homeManager.base = { config, pkgs, ... }: {
     home.packages = with pkgs; [
       gcc
       neovim
