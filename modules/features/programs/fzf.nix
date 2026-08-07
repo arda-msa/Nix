@@ -27,5 +27,7 @@
         "--bind 'alt-t:change-with-nth(2..|1..)'"
       ];
     };
+
+    stylix.targets.fzf.enable = true;
   };
 }

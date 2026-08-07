@@ -16,6 +16,7 @@
       graphical
       gnome
       intel
+      stylix
     ];
 
     networking.hostName = "karadeniz";

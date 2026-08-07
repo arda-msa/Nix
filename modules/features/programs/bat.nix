@@ -6,5 +6,7 @@
         batman
       ];
     };
+
+    stylix.targets.bat.enable = true;
   };
 }
