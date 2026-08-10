@@ -12,6 +12,9 @@
         DontCheckDefaultBrowser = true;
         OfferToSaveLogins = false;
 
+        AIControls.Default.Value = "blocked";
+        AIControls.Translations.Value = "available";
+
         ExtensionSettings = {
           # uBlock Origin
           "uBlock0@raymondhill.net" = {
