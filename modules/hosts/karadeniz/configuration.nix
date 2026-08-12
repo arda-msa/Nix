@@ -7,7 +7,7 @@
     ];
   };
 
-  flake.modules.nixos.karadeniz = { pkgs, ... }: {
+  flake.modules.nixos.karadeniz = {
     imports = with self.modules.nixos; [
       karadeniz-hardware
       homeManager
@@ -29,8 +29,6 @@
         "wheel"
       ];
     };
-
-    users.defaultUserShell = pkgs.fish;
 
     home-manager.users.arda = self.modules.homeManager.karadeniz;
 
