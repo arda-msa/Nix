@@ -7,6 +7,7 @@
       ripgrep
       tree
       wiremix
+      wl-clipboard
 
       ffmpeg
       imagemagick
