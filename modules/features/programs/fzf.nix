@@ -10,11 +10,11 @@ in
 
       defaultCommand = "fd --type f ${fdFlags}";
       defaultOptions = [
-        "--layout=reverse"
         "--border=rounded"
+        "--layout=reverse"
+        "--preview 'if test -d {}; eza --tree --level=1 --color=always --icons=always {}; else; bat {}; end'"
         "--scheme=path"
         "--tiebreak=end,length"
-        "--preview 'if test -d {}; eza --tree --level=1 --color=always --icons=always {}; else; bat {}; end'"
       ];
 
       fileWidget.command = "fd --type f ${fdFlags}";

@@ -4,7 +4,6 @@
       gitlogue
       glow
       jq
-      ripgrep
       tree
       wiremix
       wl-clipboard
