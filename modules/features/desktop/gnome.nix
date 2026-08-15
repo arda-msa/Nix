@@ -5,7 +5,10 @@
 
     services.gnome.core-apps.enable = false;
     services.gnome.evolution-data-server.enable = lib.mkForce false;
-    environment.gnome.excludePackages = [ pkgs.gnome-tour ];
+    environment.gnome.excludePackages = with pkgs; [
+      gnome-tour
+      gnome-user-docs
+    ];
 
     environment.systemPackages = with pkgs; [
       celluloid
