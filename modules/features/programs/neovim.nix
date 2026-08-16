@@ -1,8 +1,14 @@
 {
+  flake.modules.nixos.base = {
+    programs.neovim = {
+      enable = true;
+      defaultEditor = true;
+    };
+  };
+
   flake.modules.homeManager.base = { config, pkgs, ... }: {
     home.packages = with pkgs; [
       gcc
-      neovim
       tree-sitter
 
       lua-language-server
@@ -11,15 +17,16 @@
       nixfmt
     ];
 
-    home.sessionVariables = {
-      EDITOR = "nvim";
-      VISUAL = "nvim";
-      # MANPAGER = "nvim +Man!";
+    programs.neovim = {
+      enable = true;
+      defaultEditor = true;
+      sideloadInitLua = true;
     };
 
     xdg.configFile."nvim" = {
       source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/nixos/config/nvim";
       recursive = true;
     };
+
   };
 }
