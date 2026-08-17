@@ -26,12 +26,6 @@
       plugins = {
         full-border = pkgs.yaziPlugins.full-border;
         lazygit = pkgs.yaziPlugins.lazygit;
-        ucp = pkgs.fetchFromGitHub {
-          owner = "simla33";
-          repo = "ucp.yazi";
-          rev = "79043fbbfd39b7b9ae0142d11b315272dd90d33b";
-          hash = "sha256-oL3fss8/U6IH2y5B/YdK17h4LvN4XsPypmC+yzJBMnE=";
-        };
         open-git-remote = pkgs.fetchFromGitHub {
           owner = "larry-oates";
           repo = "open-git-remote.yazi";
@@ -55,16 +49,6 @@
             ];
             run = "plugin lazygit";
             desc = "Run lazygit";
-          }
-          {
-            on = [ "y" ];
-            run = "plugin ucp -- copy";
-            desc = "Copy";
-          }
-          {
-            on = [ "p" ];
-            run = "plugin ucp -- paste";
-            desc = "Paste";
           }
           {
             on = [
