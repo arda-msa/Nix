@@ -24,7 +24,10 @@
 
     xdg.terminal-exec = {
       enable = true;
-      settings.GNOME = [ "ghostty.desktop" ];
+      settings.GNOME = [
+        "kitty.desktop"
+        "ghostty.desktop"
+      ];
     };
   };
 }
