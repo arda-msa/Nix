@@ -5,15 +5,10 @@
       enableFishIntegration = true;
 
       settings = {
-        background-opacity = 0.9;
         shell-integration-features = "ssh-env";
       };
     };
 
-    stylix.targets.ghostty = {
-      enable = true;
-      fonts.enable = false;
-      opacity.enable = false;
-    };
+    stylix.targets.ghostty.enable = true;
   };
 }

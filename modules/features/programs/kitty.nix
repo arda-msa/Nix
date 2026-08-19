@@ -23,7 +23,6 @@
         scrollback_lines = 10000;
 
         # Appearance
-        background_opacity = 0.9;
         cursor_shape = "block";
         # cursor_blink_interval = 0;
         cursor_trail = 3;
@@ -44,10 +43,6 @@
       };
     };
 
-    stylix.targets.kitty = {
-      enable = true;
-      fonts.enable = false;
-      opacity.enable = false;
-    };
+    stylix.targets.kitty.enable = true;
   };
 }
