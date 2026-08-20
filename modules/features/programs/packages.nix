@@ -21,6 +21,7 @@
       hunspellDicts.tr_TR
 
       gimp
+      shotcut
     ];
   };
 }
