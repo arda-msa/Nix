@@ -11,9 +11,9 @@
 
       config = {
         # Video
-        vo = "gpu-next";
         gpu-api = "auto";
         hwdec = "vaapi";
+        vo = "gpu-next";
 
         # Subtitles
         sub-auto = "fuzzy";
@@ -34,5 +34,7 @@
         screenshot-template = "%F-%n";
       };
     };
+
+    stylix.targets.mpv.enable = true;
   };
 }
