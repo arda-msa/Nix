@@ -53,10 +53,18 @@
           {
             on = [
               "g"
+              "f"
+            ];
+            run = "cd ~/Foundry";
+            desc = "Go to ~/Foundry";
+          }
+          {
+            on = [
+              "g"
               "n"
             ];
-            run = "cd ~/notes";
-            desc = "Go to ~/notes";
+            run = "cd ~/Notes";
+            desc = "Go to ~/Notes";
           }
           {
             on = [
@@ -87,16 +95,8 @@
               "g"
               "w"
             ];
-            run = "cd ~/work";
-            desc = "Go to ~/work";
-          }
-          {
-            on = [
-              "g"
-              "x"
-            ];
-            run = "cd ~/nixos";
-            desc = "Go to ~/nixos";
+            run = "cd ~/Documents/Work";
+            desc = "Go to ~/Work";
           }
         ];
       };

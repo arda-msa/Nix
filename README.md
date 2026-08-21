@@ -1,6 +1,6 @@
-# NixOS
+# Foundry
 
-My **NixOS** configuration, managed with **Homa Manager** and **Flakes**, following the **Dendritic Pattern**.
+My **NixOS** configuration, managed with **Home Manager** and **Flakes**, following the **Dendritic Pattern**.
 
 ## Structure
 

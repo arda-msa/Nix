@@ -7,7 +7,7 @@
 
     programs.nh = {
       enable = true;
-      flake = "${config.home.homeDirectory}/nixos";
+      flake = "${config.home.homeDirectory}/Foundry";
     };
   };
 }
