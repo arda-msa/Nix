@@ -1,3 +1,5 @@
+{ self, ... }:
+
 {
   flake.modules.nixos.niri = {
     programs.niri = {
@@ -7,6 +9,10 @@
   };
 
   flake.modules.homeManager.niri = { config, ... }: {
+    imports = with self.modules.homeManager; [
+      noctalia
+    ];
+
     wayland.windowManager.niri.enable = true;
 
     xdg.configFile."niri" = {

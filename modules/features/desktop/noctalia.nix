@@ -1,7 +1,7 @@
 { inputs, ... }:
 
 {
-  flake.modules.homeManager.graphical = { pkgs, ... }: {
+  flake.modules.homeManager.noctalia = { pkgs, ... }: {
     imports = [
       inputs.noctalia.homeModules.default
     ];
@@ -11,5 +11,7 @@
       package = pkgs.noctalia;
       systemd.enable = true;
     };
+
+    stylix.targets.noctalia.enable = true;
   };
 }
