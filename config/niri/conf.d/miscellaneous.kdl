@@ -2,7 +2,6 @@
 
 // spawn-at-startup "waybar"
 // spawn-sh-at-startup "swaybg -i /home/arda/Pictures/Wallpapers/cherry-blossom-train.jpg"
-spawn-at-startup "mako"
 
 prefer-no-csd
 

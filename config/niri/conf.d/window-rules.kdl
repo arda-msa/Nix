@@ -1,15 +1,15 @@
 // https://niri-wm.github.io/niri/Configuration:-Window-Rules
 
 // Example: Block out two password managers from screen capture.
-// window-rule {
-//     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-//     match app-id=r#"^org\.gnome\.World\.Secrets$"#
-//
-//     block-out-from "screen-capture"
-//
-//     // Use this instead if you want them visible on third-party screenshot tools.
-//     // block-out-from "screencast"
-// }
+/-window-rule {
+    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
+    match app-id=r#"^org\.gnome\.World\.Secrets$"#
+
+    block-out-from "screen-capture"
+
+    // Use this instead if you want them visible on third-party screenshot tools.
+    // block-out-from "screencast"
+}
 
 // Enable rounded corners for all windows.
 window-rule {
@@ -25,7 +25,8 @@ window-rule {
 
 // Open maximized to edges.
 window-rule {
-  match app-id=r#"firefox$"#
+    match app-id=r#"firefox$"#
+    exclude title="^Picture-in-Picture$"
     match app-id="org.gnome.Nautilus"
     open-maximized-to-edges true
 }
