@@ -43,6 +43,8 @@
       };
     };
 
+    home.sessionVariables.TERMINAL = "kitty";
+
     stylix.targets.kitty.enable = true;
   };
 }

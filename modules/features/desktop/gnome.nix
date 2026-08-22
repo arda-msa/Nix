@@ -21,13 +21,5 @@
       nautilus
       snapshot
     ];
-
-    xdg.terminal-exec = {
-      enable = true;
-      settings.GNOME = [
-        "kitty.desktop"
-        "ghostty.desktop"
-      ];
-    };
   };
 }
