@@ -37,9 +37,16 @@ window-rule {
     open-maximized true
 }
 
+// Open floating.
+window-rule {
+    match app-id="^mpv$"
+    open-floating true
+}
+
 // Open the Firefox Picture-in-Picture player floating.
 window-rule {
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id="^mpv$"
     open-floating true
     max-width 1200
     max-height 900
