@@ -1,0 +1,11 @@
+// https://niri-wm.github.io/niri/Configuration:-Introduction
+// This config is in the KDL format: https://kdl.dev
+
+include "conf.d/input.kdl"
+include "conf.d/outputs.kdl"
+include "conf.d/layout.kdl"
+include "conf.d/animations.kdl"
+include "conf.d/window-rules.kdl"
+include "conf.d/layer-rules.kdl"
+include "conf.d/miscellaneous.kdl"
+include "conf.d/binds.kdl"

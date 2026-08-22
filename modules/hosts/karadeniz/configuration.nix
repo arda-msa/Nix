@@ -15,6 +15,7 @@
       base
       graphical
       gnome
+      niri
       intel
       stylix
     ];
@@ -46,6 +47,7 @@
     imports = with self.modules.homeManager; [
       base
       graphical
+      niri
     ];
   };
 }

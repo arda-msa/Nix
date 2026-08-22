@@ -27,6 +27,5 @@
       source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Foundry/config/nvim";
       recursive = true;
     };
-
   };
 }
