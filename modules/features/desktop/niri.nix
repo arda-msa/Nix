@@ -10,7 +10,7 @@
     wayland.windowManager.niri.enable = true;
 
     xdg.configFile."niri" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Foundry/config/niri";
+      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Nix/config/niri";
       recursive = true;
     };
   };
