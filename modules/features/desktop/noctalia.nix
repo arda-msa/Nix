@@ -1,14 +1,7 @@
-{ inputs, ... }:
-
 {
-  flake.modules.homeManager.noctalia = { pkgs, ... }: {
-    imports = [
-      inputs.noctalia.homeModules.default
-    ];
-
+  flake.modules.homeManager.noctalia = {
     programs.noctalia = {
       enable = true;
-      package = pkgs.noctalia;
       systemd.enable = true;
     };
 
