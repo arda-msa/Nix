@@ -11,6 +11,7 @@
           "home-manager"
           "noogle"
         ];
+        update_interval = "24h";
       };
     };
   };
