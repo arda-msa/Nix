@@ -14,6 +14,7 @@
 
       base
       graphical
+      gdm
       gnome
       niri
       intel
