@@ -57,6 +57,7 @@ My **NixOS** configuration, managed with **Home Manager** and **Flakes**, follow
 │   │   │   └── shell.nix
 │   │   └── style/
 │   │       ├── fonts.nix
+│   │       ├── gtk.nix
 │   │       └── stylix.nix
 │   └── hosts/
 │       └── karadeniz/
