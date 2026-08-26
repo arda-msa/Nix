@@ -9,3 +9,6 @@ include "conf.d/window-rules.kdl"
 include "conf.d/layer-rules.kdl"
 include "conf.d/miscellaneous.kdl"
 include "conf.d/binds.kdl"
+
+// Noctalia's built-in template for niri.
+include "noctalia.kdl"
