@@ -19,9 +19,6 @@
       libreoffice
       hunspellDicts.en_US
       hunspellDicts.tr_TR
-
-      gimp
-      shotcut
     ];
   };
 }
