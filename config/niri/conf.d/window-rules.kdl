@@ -23,18 +23,12 @@ window-rule {
     draw-border-with-background false
 }
 
-// Open maximized to edges.
+// Open maximized.
 window-rule {
     match app-id=r#"firefox$"#
     exclude app-id=r#"firefox$"# title="^Library"
     exclude app-id=r#"firefox$"# title="^Picture-in-Picture$"
     match app-id="org.gnome.Nautilus"
-    open-maximized-to-edges true
-}
-
-// Open maximized.
-window-rule {
-    // match app-id="com.mitchellh.ghostty"
     match app-id="^kitty$"
     open-maximized true
 }
