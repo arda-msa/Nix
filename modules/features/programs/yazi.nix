@@ -10,11 +10,11 @@
 
       settings = {
         mgr = {
-          sort_by = "alphabetical";
+          sort_by = "natural";
           sort_sensitive = false;
           sort_dir_first = true;
           linemode = "none";
-          show_hidden = true;
+          show_hidden = false;
           show_symlink = true;
         };
 
@@ -85,10 +85,10 @@
           {
             on = [
               "g"
-              "xf"
+              "v"
             ];
-            run = "cd ~/Nix";
-            desc = "Go to ~/Nix";
+            run = "cd ~/Videos";
+            desc = "Go to ~/Videos";
           }
           {
             on = [
@@ -97,6 +97,14 @@
             ];
             run = "cd ~/Documents/Work";
             desc = "Go to ~/Documents/Work";
+          }
+          {
+            on = [
+              "g"
+              "x"
+            ];
+            run = "cd ~/Nix";
+            desc = "Go to ~/Nix";
           }
         ];
       };
