@@ -29,6 +29,7 @@ window-rule {
     exclude app-id=r#"firefox$"# title="^Library"
     exclude app-id=r#"firefox$"# title="^Picture-in-Picture$"
     match app-id="org.gnome.Nautilus"
+    match app-id=r#"brave-origin$"#
     match app-id="^kitty$"
     open-maximized true
 }
