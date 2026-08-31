@@ -10,7 +10,6 @@
 
       ffmpeg
       imagemagick
-      yt-dlp
     ];
   };
 }
