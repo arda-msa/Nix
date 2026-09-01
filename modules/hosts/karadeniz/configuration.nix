@@ -15,7 +15,7 @@
       base
       graphical
       gdm
-      gnome
+      # gnome
       niri
       intel
       stylix

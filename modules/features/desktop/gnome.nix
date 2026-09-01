@@ -12,10 +12,15 @@
     environment.systemPackages = with pkgs; [
       celluloid
       dconf-editor
-      ffmpegthumbnailer
       gnome-calculator
       gnome-extension-manager
       gnome-tweaks
+    ];
+  };
+
+  flake.modules.nixos.base = { pkgs, ... }: {
+    environment.systemPackages = with pkgs; [
+      ffmpegthumbnailer
       loupe
       nautilus
       snapshot
