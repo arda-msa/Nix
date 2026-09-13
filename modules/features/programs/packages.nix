@@ -9,6 +9,7 @@
       wl-clipboard
 
       ffmpeg
+      handbrake
       imagemagick
       losslesscut-bin
     ];
