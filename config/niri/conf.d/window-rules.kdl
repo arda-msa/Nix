@@ -32,6 +32,10 @@ window-rule {
     match app-id=r#"brave-origin$"#
     match app-id="^kitty$"
     match app-id="^losslesscut$"
+    match app-id="Spotify"
+    match app-id="fr.handbrake.ghb"
+    match app-id="org.kde.kdenlive"
+    match app-id="gimp"
     open-maximized true
 }
 
