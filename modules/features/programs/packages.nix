@@ -10,6 +10,7 @@
 
       ffmpeg
       imagemagick
+      losslesscut-bin
     ];
   };
 }
