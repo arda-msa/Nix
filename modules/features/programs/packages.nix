@@ -9,6 +9,7 @@
       wl-clipboard
 
       ffmpeg
+      gifski
       handbrake
       imagemagick
       losslesscut
