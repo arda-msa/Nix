@@ -11,7 +11,7 @@
       ffmpeg
       handbrake
       imagemagick
-      losslesscut-bin
+      losslesscut
     ];
   };
 }
