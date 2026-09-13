@@ -4,9 +4,10 @@
       enable = true;
 
       scripts = with pkgs.mpvScripts; [
-        uosc
-        thumbfast
+        cut
         mpris
+        thumbfast
+        uosc
       ];
 
       config = {
