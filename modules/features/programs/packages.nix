@@ -7,14 +7,6 @@
       tree
       wiremix
       wl-clipboard
-
-      ffmpeg
-      gifski
-      gimp-with-plugins
-      handbrake
-      imagemagick
-      kdePackages.kdenlive
-      losslesscut
     ];
   };
 }
