@@ -12,6 +12,7 @@
       gifski
       handbrake
       imagemagick
+      kdePackages.kdenlive
       losslesscut
     ];
   };
