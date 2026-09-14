@@ -10,6 +10,7 @@
 
       ffmpeg
       gifski
+      gimp-with-plugins
       handbrake
       imagemagick
       kdePackages.kdenlive
