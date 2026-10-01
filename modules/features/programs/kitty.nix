@@ -41,6 +41,11 @@
         mode = "no-cursor";
         enableFishIntegration = true;
       };
+
+      keybindings = {
+        "ctrl+shift+n" = "new_os_window_with_cwd";
+        "ctrl+shift+t" = "new_tab_with_cwd";
+      };
     };
 
     home.sessionVariables.TERMINAL = "kitty";
