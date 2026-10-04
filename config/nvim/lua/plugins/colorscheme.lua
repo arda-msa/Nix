@@ -9,6 +9,7 @@ return {
       },
     },
   },
+
   {
     "ellisonleao/gruvbox.nvim",
     lazy = false,
@@ -26,10 +27,11 @@ return {
       })
     end,
   },
+
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox",
+      colorscheme = "tokyonight-night",
     },
   },
 }

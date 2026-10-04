@@ -25,8 +25,11 @@
           skipStats
           sortPlay
         ];
+
+        theme = spicePkgs.themes.tokyoNight;
+        colorScheme = "Night";
       };
 
-      stylix.targets.spicetify.enable = true;
+      stylix.targets.spicetify.enable = false;
     };
 }
