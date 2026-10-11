@@ -4,7 +4,6 @@
       gitlogue
       glow
       tree
-      wiremix
       wl-clipboard
     ];
   };
