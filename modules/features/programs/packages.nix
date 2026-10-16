@@ -3,6 +3,7 @@
     home.packages = with pkgs; [
       gitlogue
       glow
+      qbittorrent
       tree
       wl-clipboard
     ];
