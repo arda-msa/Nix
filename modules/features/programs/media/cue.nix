@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.graphical =
+  flake.modules.homeManager.cue =
     { pkgs, ... }:
     let
       cue = pkgs.buildGoModule rec {

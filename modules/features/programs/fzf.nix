@@ -3,7 +3,7 @@ let
 in
 
 {
-  flake.modules.homeManager.base = {
+  flake.modules.homeManager.fzf = {
     programs.fzf = {
       enable = true;
       enableFishIntegration = true;
@@ -21,7 +21,9 @@ in
       changeDirWidget.command = "fd --type d ${fdFlags}";
       historyWidget.options = [ "--preview-window hidden" ];
     };
+  };
 
+  flake.modules.homeManager.stylix = {
     stylix.targets.fzf.enable = true;
   };
 }

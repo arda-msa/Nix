@@ -1,7 +1,7 @@
 { inputs, ... }:
 
 {
-  flake.modules.homeManager.graphical = {
+  flake.modules.homeManager.zen-browser = {
     imports = [
       inputs.zen-browser.homeModules.beta
     ];
@@ -97,7 +97,9 @@
         isDefault = true;
       };
     };
+  };
 
+  flake.modules.homeManager.stylix = {
     stylix.targets.zen-browser = {
       enable = true;
       profileNames = [ "default" ];

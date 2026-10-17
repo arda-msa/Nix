@@ -1,12 +1,12 @@
 {
-  flake.modules.nixos.base = {
+  flake.modules.nixos.neovim = {
     programs.neovim = {
       enable = true;
       defaultEditor = true;
     };
   };
 
-  flake.modules.homeManager.base = { config, pkgs, ... }: {
+  flake.modules.homeManager.neovim = { config, pkgs, ... }: {
     home.packages = with pkgs; [
       gcc
       tree-sitter

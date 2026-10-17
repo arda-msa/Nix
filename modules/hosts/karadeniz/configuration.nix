@@ -9,16 +9,10 @@
 
   flake.modules.nixos.karadeniz = {
     imports = with self.modules.nixos; [
-      karadeniz-hardware
-      homeManager
-
       base
-      graphical
-      gdm
-      # gnome
-      niri
+      desktop
+      homeManager
       intel
-      stylix
     ];
 
     networking.hostName = "karadeniz";
@@ -47,8 +41,7 @@
 
     imports = with self.modules.homeManager; [
       base
-      graphical
-      niri
+      desktop
     ];
   };
 }

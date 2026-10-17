@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.base = { pkgs, ... }: {
+  flake.modules.homeManager.bat = { pkgs, ... }: {
     programs.bat = {
       enable = true;
 
@@ -11,7 +11,9 @@
         batman
       ];
     };
+  };
 
+  flake.modules.homeManager.stylix = {
     stylix.targets.bat.enable = true;
   };
 }

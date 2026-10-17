@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.graphical = {
+  flake.modules.homeManager.ghostty = {
     programs.ghostty = {
       enable = true;
       enableFishIntegration = true;
@@ -8,7 +8,9 @@
         shell-integration-features = "ssh-env";
       };
     };
+  };
 
+  flake.modules.homeManager.stylix = {
     stylix.targets.ghostty.enable = true;
   };
 }

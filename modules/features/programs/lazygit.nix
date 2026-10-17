@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.base = {
+  flake.modules.homeManager.lazygit = {
     programs.lazygit = {
       enable = true;
       enableFishIntegration = true;
@@ -11,7 +11,9 @@
         };
       };
     };
+  };
 
+  flake.modules.homeManager.stylix = {
     stylix.targets.lazygit.enable = true;
   };
 }

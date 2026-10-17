@@ -1,7 +1,7 @@
 { inputs, ... }:
 
 {
-  flake.modules.homeManager.graphical =
+  flake.modules.homeManager.spicetify =
     { pkgs, ... }:
     let
       spicePkgs = inputs.spicetify-nix.legacyPackages.${pkgs.stdenv.hostPlatform.system};
@@ -29,7 +29,9 @@
         theme = spicePkgs.themes.tokyoNight;
         colorScheme = "Night";
       };
-
-      stylix.targets.spicetify.enable = false;
     };
+
+  flake.modules.homeManager.stylix = {
+    stylix.targets.spicetify.enable = false;
+  };
 }

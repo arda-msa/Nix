@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.graphical = {
+  flake.modules.nixos.services = {
     services.gvfs.enable = true;
     services.power-profiles-daemon.enable = true;
     services.udisks2.enable = true;

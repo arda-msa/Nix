@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.graphical = { pkgs, ... }: {
+  flake.modules.homeManager.mpv = { pkgs, ... }: {
     programs.mpv = {
       enable = true;
 

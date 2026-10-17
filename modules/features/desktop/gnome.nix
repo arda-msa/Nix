@@ -2,8 +2,11 @@
   flake.modules.nixos.gnome = { lib, pkgs, ... }: {
     services.desktopManager.gnome.enable = true;
 
-    services.gnome.core-apps.enable = false;
-    services.gnome.evolution-data-server.enable = lib.mkForce false;
+    services.gnome = {
+      core-apps.enable = false;
+      evolution-data-server.enable = lib.mkForce false;
+    };
+
     environment.gnome.excludePackages = with pkgs; [
       gnome-tour
       gnome-user-docs

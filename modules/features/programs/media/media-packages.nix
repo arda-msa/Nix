@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.graphical = { pkgs, ... }: {
+  flake.modules.homeManager.media-packages = { pkgs, ... }: {
     home.packages = with pkgs; [
       ffmpeg
       gifski

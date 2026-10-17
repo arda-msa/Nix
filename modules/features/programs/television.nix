@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.base = {
+  flake.modules.homeManager.television = {
     programs.television = {
       enable = true;
       enableFishIntegration = true;

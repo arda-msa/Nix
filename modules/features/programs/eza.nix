@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.base = {
+  flake.modules.homeManager.eza = {
     programs.eza = {
       enable = true;
       enableFishIntegration = true;

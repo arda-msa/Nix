@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.graphical = {
+  flake.modules.nixos.firefox = {
     programs.firefox = {
       enable = true;
       languagePacks = [

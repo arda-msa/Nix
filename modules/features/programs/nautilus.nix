@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.graphical = { pkgs, ... }: {
+  flake.modules.nixos.nautilus = { pkgs, ... }: {
     environment.systemPackages = with pkgs; [
       ffmpegthumbnailer
       nautilus

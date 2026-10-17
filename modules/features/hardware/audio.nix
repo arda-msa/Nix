@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.graphical = {
+  flake.modules.nixos.audio = {
     services.pulseaudio.enable = false;
 
     services.pipewire = {

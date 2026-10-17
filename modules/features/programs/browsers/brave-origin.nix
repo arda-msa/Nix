@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.graphical = { pkgs, ... }: {
+  flake.modules.homeManager.brave-origin = { pkgs, ... }: {
     programs.chromium = {
       enable = true;
       package = pkgs.brave-origin;

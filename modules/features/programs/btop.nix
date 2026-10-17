@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.base = {
+  flake.modules.homeManager.btop = {
     programs.btop = {
       enable = true;
 
@@ -10,7 +10,9 @@
         vim_keys = true;
       };
     };
+  };
 
+  flake.modules.homeManager.stylix = {
     stylix.targets.btop.enable = true;
   };
 }

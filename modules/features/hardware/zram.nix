@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.base = {
+  flake.modules.nixos.zram = {
     zramSwap = {
       enable = true;
       algorithm = "zstd";

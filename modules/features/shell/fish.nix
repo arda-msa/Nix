@@ -1,9 +1,9 @@
 {
-  flake.modules.nixos.base = {
+  flake.modules.nixos.fish = {
     programs.fish.enable = true;
   };
 
-  flake.modules.homeManager.base = { pkgs, ... }: {
+  flake.modules.homeManager.fish = { pkgs, ... }: {
     programs.fish = {
       enable = true;
 

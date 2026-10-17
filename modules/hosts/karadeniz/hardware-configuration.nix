@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.karadeniz-hardware =
+  flake.modules.nixos.karadeniz =
     {
       config,
       lib,

@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.base = { config, pkgs, ... }: {
+  flake.modules.homeManager.nh = { config, pkgs, ... }: {
     home.packages = with pkgs; [
       nvd
       nix-output-monitor

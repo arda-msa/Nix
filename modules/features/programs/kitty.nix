@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.graphical = {
+  flake.modules.homeManager.kitty = {
     programs.kitty = {
       enable = true;
 
@@ -49,7 +49,9 @@
     };
 
     home.sessionVariables.TERMINAL = "kitty";
+  };
 
+  flake.modules.homeManager.stylix = {
     stylix.targets.kitty.enable = true;
   };
 }

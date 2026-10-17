@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.base = { pkgs, ... }: {
+  flake.modules.homeManager.yazi = { pkgs, ... }: {
     home.packages = with pkgs; [
       exiftool
     ];
@@ -109,7 +109,9 @@
         ];
       };
     };
+  };
 
+  flake.modules.homeManager.stylix = {
     stylix.targets.yazi.enable = true;
   };
 }
