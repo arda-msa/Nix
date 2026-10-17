@@ -8,7 +8,6 @@
       imagemagick
       kdePackages.kdenlive
       losslesscut
-      loupe
       snapshot
     ];
   };

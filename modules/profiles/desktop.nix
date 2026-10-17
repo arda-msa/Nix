@@ -36,6 +36,7 @@
       qbittorrent
       spicetify
       spotify-player
+      swayimg
       wiremix
       yt-dlp
       zathura

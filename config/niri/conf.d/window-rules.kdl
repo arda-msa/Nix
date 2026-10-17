@@ -48,6 +48,7 @@ window-rule {
     match app-id="xdg-desktop-portal-gtk"
     match app-id="dev.noctalia.Noctalia"
     match app-id="^mpv$"
+    match app-id="swayimg"
     match app-id="localsend_app" title="Open File"
     match app-id=r#"firefox$"# title="^Library"
     match app-id=r#"firefox$"# title="^Picture-in-Picture$"

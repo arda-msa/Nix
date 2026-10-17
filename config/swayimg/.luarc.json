@@ -1,0 +1,4 @@
+{
+  "diagnostics.globals": ["swayimg"],
+  "workspace.library": ["~/.local/share/swayimg-stubs"]
+}
