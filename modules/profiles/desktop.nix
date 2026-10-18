@@ -8,6 +8,7 @@
       firefox
       gdm
       # gnome
+      hyprland
       localsend
       nautilus
       niri
@@ -24,6 +25,7 @@
       distrobox
       gallery-dl
       ghostty
+      hyprland
       kitty
       lazygit
       libreoffice
