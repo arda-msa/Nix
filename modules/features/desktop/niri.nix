@@ -9,9 +9,7 @@
   flake.modules.homeManager.niri = { config, ... }: {
     wayland.windowManager.niri.enable = true;
 
-    xdg.configFile."niri" = {
-      source = config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Nix/config/niri";
-      recursive = true;
-    };
+    xdg.configFile."niri".source =
+      config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Nix/config/niri";
   };
 }
