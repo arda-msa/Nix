@@ -4,13 +4,13 @@
     let
       cue = pkgs.buildGoModule rec {
         pname = "cue";
-        version = "1.3.1";
+        version = "1.3.2";
 
         src = pkgs.fetchFromGitHub {
           owner = "SuperCoolPencil";
           repo = "cue";
           rev = "v${version}";
-          hash = "sha256-qVAPdClixl/dfA/fscmd/eWwEFRIOEBxsHdxKdMxt/I=";
+          hash = "sha256-1QG7N2CnJBKDxbABwm/L7Syx4nYdbhdm6cTu05jCxP8=";
         };
 
         vendorHash = "sha256-VJEbnosZZYYLWy3+Mscd1v0rYWBS71C1lTk3zxeSXsQ=";
