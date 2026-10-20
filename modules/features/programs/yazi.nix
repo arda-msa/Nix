@@ -110,8 +110,4 @@
       };
     };
   };
-
-  flake.modules.homeManager.stylix = {
-    stylix.targets.yazi.enable = true;
-  };
 }

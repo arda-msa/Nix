@@ -38,7 +38,5 @@
         screenshot-template = "%F-%n";
       };
     };
-
-    stylix.targets.mpv.enable = true;
   };
 }

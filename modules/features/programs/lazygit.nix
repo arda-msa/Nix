@@ -12,8 +12,4 @@
       };
     };
   };
-
-  flake.modules.homeManager.stylix = {
-    stylix.targets.lazygit.enable = true;
-  };
 }

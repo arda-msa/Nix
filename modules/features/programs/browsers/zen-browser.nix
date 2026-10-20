@@ -98,11 +98,4 @@
       };
     };
   };
-
-  flake.modules.homeManager.stylix = {
-    stylix.targets.zen-browser = {
-      enable = true;
-      profileNames = [ "default" ];
-    };
-  };
 }

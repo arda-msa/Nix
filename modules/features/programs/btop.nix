@@ -11,8 +11,4 @@
       };
     };
   };
-
-  flake.modules.homeManager.stylix = {
-    stylix.targets.btop.enable = true;
-  };
 }

@@ -54,4 +54,28 @@
       };
     };
   };
+
+  flake.modules.homeManager.stylix = {
+    stylix.targets = {
+      bat.enable = true;
+      btop.enable = true;
+      fzf.enable = true;
+      ghostty.enable = true;
+      gtk = {
+        enable = true;
+        flatpakSupport.enable = true;
+      };
+      kitty.enable = true;
+      lazygit.enable = true;
+      mpv.enable = true;
+      noctalia.enable = true;
+      spicetify.enable = false;
+      yazi.enable = true;
+      zathura.enable = true;
+      zen-browser = {
+        enable = true;
+        profileNames = [ "default" ];
+      };
+    };
+  };
 }

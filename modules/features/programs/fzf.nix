@@ -22,8 +22,4 @@ in
       historyWidget.options = [ "--preview-window hidden" ];
     };
   };
-
-  flake.modules.homeManager.stylix = {
-    stylix.targets.fzf.enable = true;
-  };
 }

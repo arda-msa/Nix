@@ -50,8 +50,4 @@
 
     home.sessionVariables.TERMINAL = "kitty";
   };
-
-  flake.modules.homeManager.stylix = {
-    stylix.targets.kitty.enable = true;
-  };
 }

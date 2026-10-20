@@ -9,8 +9,4 @@
       };
     };
   };
-
-  flake.modules.homeManager.stylix = {
-    stylix.targets.ghostty.enable = true;
-  };
 }

@@ -4,8 +4,4 @@
       enable = true;
     };
   };
-
-  flake.modules.homeManager.stylix = {
-    stylix.targets.zathura.enable = true;
-  };
 }

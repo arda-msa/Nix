@@ -30,8 +30,4 @@
         colorScheme = "Night";
       };
     };
-
-  flake.modules.homeManager.stylix = {
-    stylix.targets.spicetify.enable = false;
-  };
 }
