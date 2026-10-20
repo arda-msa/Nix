@@ -1,5 +1,6 @@
 // https://niri-wm.github.io/niri/Configuration:-Miscellaneous.html
 
+spawn-at-startup "noctalia"
 // spawn-at-startup "waybar"
 // spawn-sh-at-startup "swaybg -i /home/arda/Pictures/Wallpapers/cherry-blossom-train.jpg"
 
