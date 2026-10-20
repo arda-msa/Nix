@@ -6,14 +6,14 @@
       audio
       bluetooth
       firefox
-      gdm
+      # gdm
       # gnome
       hyprland
       localsend
       nautilus
       niri
-      # plasma
-      # plasma-login-manager
+      plasma
+      plasma-login-manager
       podman
       services
     ];

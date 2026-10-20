@@ -12,7 +12,7 @@
       network
       nix
       shell
-      stylix
+      # stylix
       zram
     ];
   };
@@ -35,7 +35,7 @@
       ripgrep
       shell
       starship
-      stylix
+      # stylix
       television
       xdg
       yazi
