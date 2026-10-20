@@ -12,6 +12,7 @@
       localsend
       nautilus
       niri
+      # noctalia-greeter
       plasma
       plasma-login-manager
       podman
