@@ -12,6 +12,7 @@
       localsend
       nautilus
       niri
+      # plasma
       # plasma-login-manager
       podman
       services
