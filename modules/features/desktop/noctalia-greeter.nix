@@ -3,6 +3,8 @@
     services.displayManager.noctalia-greeter = {
       enable = true;
 
+      passwordlessSyncUsers = [ "arda" ];
+
       cursorTheme = {
         package = pkgs.adwaita-icon-theme;
         name = "Adwaita";
