@@ -84,17 +84,47 @@
             ];
           };
         };
-
-        Preferences = {
-          "browser.aboutConfig.showWarning" = false;
-          "browser.translations.automaticallyPopup" = false;
-          "intl.accept_languages" = "en-US, en, tr";
-          "media.ffmpeg.vaapi.enabled" = true;
-        };
       };
 
       profiles.default = {
         isDefault = true;
+
+        keyboardShortcutsVersion = 21;
+        keyboardShortcuts = [
+          {
+            id = "viewBookmarksToolbarKb";
+            key = "b";
+            modifiers = {
+              control = true;
+              shift = true;
+            };
+          }
+          {
+            id = "zen-compact-mode-show-sidebar";
+            key = "s";
+            modifiers.control = true;
+          }
+          {
+            id = "zen-compact-mode-toggle";
+            key = "s";
+            modifiers = {
+              control = true;
+              alt = true;
+            };
+          }
+        ];
+
+        settings = {
+          "browser.aboutConfig.showWarning" = false;
+          "browser.toolbars.bookmarks.visibility" = "always";
+          "browser.translations.automaticallyPopup" = false;
+          "intl.accept_languages" = "en-US, en, tr";
+          "media.ffmpeg.vaapi.enabled" = true;
+          "zen.urlbar.replace-newtab" = false;
+          "zen.view.compact.toolbar-hide-after-hover.duration" = 2000;
+          "zen.view.show-newtab-button-top" = false;
+          "zen.view.use-single-toolbar" = false;
+        };
       };
     };
   };
