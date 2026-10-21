@@ -4,5 +4,5 @@ My **NixOS** configuration, managed with **Home Manager** and **Flakes**, follow
 
 ## Notes
 
-- **Niri** and **Neovim** configurations are managed via `mkOutOfStoreSymlink`.
+- Some programs are managed managed via `mkOutOfStoreSymlink`.
 - TODO: Add comments for documentation.
