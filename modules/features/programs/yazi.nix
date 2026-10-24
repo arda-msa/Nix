@@ -23,6 +23,27 @@
         };
       };
 
+      # theme =
+      #   let
+      #     separators = {
+      #       open = "▐";
+      #       close = "▌";
+      #     };
+      #   in
+      #   {
+      #     status = {
+      #       sep_left = separators;
+      #       sep_right = separators;
+      #     };
+      #     tabs = {
+      #       sep_outer = separators;
+      #       sep_inner = separators;
+      #     };
+      #     indicator = {
+      #       padding = separators;
+      #     };
+      #   };
+
       plugins = {
         full-border = pkgs.yaziPlugins.full-border;
         lazygit = pkgs.yaziPlugins.lazygit;
