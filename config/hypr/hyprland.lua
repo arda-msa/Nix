@@ -34,8 +34,8 @@ hl.monitor({
 
 -- Set programs that you use
 local terminal = "kitty"
-local fileManager = "dolphin"
-local menu = "hyprlauncher"
+local fileManager = "nautilus"
+local menu = "noctalia msg panel-toggle launcher"
 
 -------------------
 ---- AUTOSTART ----
@@ -107,7 +107,7 @@ hl.config({
 	},
 
 	decoration = {
-		rounding = 2,
+		rounding = 4,
 		rounding_power = 2,
 
 		-- Change transparency of focused and unfocused windows
@@ -224,6 +224,9 @@ hl.config({
 		kb_options = "",
 		kb_rules = "",
 
+		repeat_delay = 200,
+		repeat_rate = 40,
+
 		follow_mouse = 1,
 
 		sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
@@ -263,7 +266,7 @@ hl.bind(
 )
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
-hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu))
+hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 
