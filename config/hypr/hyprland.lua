@@ -333,8 +333,8 @@ hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true 
 -- Screenshot with Noctalia
 hl.bind("PRINT", hl.dsp.exec_cmd("noctalia msg screenshot-region"), { locked = true })
 hl.bind(mainMod .. " + PRINT", hl.dsp.exec_cmd("noctalia msg screenshot-fullscreen pick"), { locked = true })
-hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("noctalia msg screenshot-fullscreen"), { locked = true })
-hl.bind("CTRL + PRINT", hl.dsp.exec_cmd("noctalia msg screenshot-window"), { locked = true })
+hl.bind("CTRL + PRINT", hl.dsp.exec_cmd("noctalia msg screenshot-fullscreen"), { locked = true })
+hl.bind("SHIFT + PRINT", hl.dsp.exec_cmd("noctalia msg screenshot-window"), { locked = true })
 hl.bind(mainMod .. " + SHIFT + PRINT", hl.dsp.exec_cmd("noctalia msg screenshot-annotate"), { locked = true })
 
 --------------------------------
@@ -390,6 +390,31 @@ hl.window_rule({
 -- Noctalia settings.
 hl.window_rule({
 	match = { class = "dev.noctalia.Noctalia" },
+	float = true,
+	size = { 1080, 920 },
+})
+
+-- Floating windows.
+hl.window_rule({
+	match = { class = "^(xdg-desktop-portal-gtk|mpv|swayimg)$" },
+	float = true,
+	size = { 1080, 920 },
+})
+
+hl.window_rule({
+	match = { class = "^localsend_app$", title = "^Open File" },
+	float = true,
+	size = { 1080, 920 },
+})
+
+hl.window_rule({
+	match = { class = "^(firefox|zen-beta)$", title = "^Library" },
+	float = true,
+	size = { 1080, 920 },
+})
+
+hl.window_rule({
+	match = { title = "^Picture-in-Picture$" },
 	float = true,
 	size = { 1080, 920 },
 })
