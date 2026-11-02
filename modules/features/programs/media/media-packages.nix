@@ -7,7 +7,7 @@
       handbrake
       imagemagick
       kdePackages.kdenlive
-      losslesscut
+      # losslesscut
       snapshot
     ];
   };
