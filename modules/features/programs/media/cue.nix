@@ -1,15 +1,14 @@
 {
-  flake.modules.homeManager.cue =
-    { pkgs, ... }:
-    let
-      cue = pkgs.buildGoModule rec {
+  flake.modules.homeManager.cue = { pkgs, lib, ... }: {
+    home.packages = [
+      (pkgs.buildGoModule (finalAttrs: {
         pname = "cue";
         version = "1.3.4";
 
         src = pkgs.fetchFromGitHub {
           owner = "SuperCoolPencil";
           repo = "cue";
-          rev = "v${version}";
+          tag = "v${finalAttrs.version}";
           hash = "sha256-Q5dv+qNqbUeV8MQQHfJMRyRFGQLcWWzAr28zl0pM7rs=";
         };
 
@@ -18,11 +17,9 @@
         meta = {
           description = "A terminal client for browsing and playing Plex or Jellyfin media.";
           homepage = "https://github.com/SuperCoolPencil/cue";
-          license = pkgs.lib.licenses.mit;
+          license = lib.licenses.mit;
         };
-      };
-    in
-    {
-      home.packages = [ cue ];
-    };
+      }))
+    ];
+  };
 }
