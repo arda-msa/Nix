@@ -1,4 +1,3 @@
 {
-  "diagnostics.globals": ["hl"],
-  "workspace.library": ["~/.local/share/hypr-stubs"]
+  "workspace.library": ["/run/current-system/sw/share/hypr/stubs"]
 }

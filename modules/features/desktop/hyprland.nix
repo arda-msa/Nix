@@ -17,12 +17,10 @@
     };
   };
 
-  flake.modules.homeManager.hyprland = { config, pkgs, ... }: {
+  flake.modules.homeManager.hyprland = { config, ... }: {
     # wayland.windowManager.hyprland.enable = true;
 
     xdg.configFile."hypr".source =
       config.lib.file.mkOutOfStoreSymlink "${config.home.homeDirectory}/Nix/config/hypr";
-
-    xdg.dataFile."hypr-stubs".source = "${pkgs.hyprland}/share/hypr/stubs";
   };
 }
