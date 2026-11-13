@@ -89,7 +89,6 @@
       profiles.default = {
         isDefault = true;
 
-        keyboardShortcutsVersion = 21;
         keyboardShortcuts = [
           {
             id = "viewBookmarksToolbarKb";
