@@ -28,6 +28,7 @@
       distrobox
       gallery-dl
       ghostty
+      helix
       hyprland
       kitty
       lazygit
