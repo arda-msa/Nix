@@ -18,6 +18,8 @@
 
     hyprland.url = "github:hyprwm/Hyprland";
 
+    luciole.url = "github:noctalia-dev/luciole/cachix";
+
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
