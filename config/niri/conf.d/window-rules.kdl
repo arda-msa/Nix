@@ -23,6 +23,12 @@ window-rule {
     draw-border-with-background false
 }
 
+// Open floating.
+window-rule {
+    match app-id="qalculate-gtk"
+    open-floating true
+}
+
 // Open maximized.
 window-rule {
     match app-id=r#"firefox$"#
