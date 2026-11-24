@@ -4,6 +4,7 @@
       gitlogue
       glow
       leaf-markdown-viewer
+      qalculate-gtk
       tree
       wl-clipboard
     ];
