@@ -1,8 +1,5 @@
 {
   flake.modules.homeManager.fd = {
-    programs.fd = {
-      enable = true;
-      ignores = [ ".git/" ];
-    };
+    programs.fd.enable = true;
   };
 }
