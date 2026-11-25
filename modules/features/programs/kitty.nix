@@ -39,7 +39,6 @@
 
       shellIntegration = {
         mode = "no-cursor";
-        enableFishIntegration = true;
       };
 
       keybindings = {

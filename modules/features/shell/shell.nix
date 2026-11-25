@@ -14,6 +14,9 @@
       fish
     ];
 
-    home.shell.enableShellIntegration = false;
+    home.shell = {
+      enableShellIntegration = false;
+      enableFishIntegration = true;
+    };
   };
 }
