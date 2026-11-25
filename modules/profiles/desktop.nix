@@ -12,7 +12,8 @@
       niri
       noctalia-greeter
       podman
-      services
+      power
+      storage
     ];
   };
 
