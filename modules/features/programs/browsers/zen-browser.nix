@@ -119,6 +119,7 @@
           "browser.translations.automaticallyPopup" = false;
           "intl.accept_languages" = "en-US, en, tr";
           "media.ffmpeg.vaapi.enabled" = true;
+          "zen.library.enabled" = false; # Use the old Library window.
           "zen.urlbar.replace-newtab" = false;
           "zen.view.compact.toolbar-hide-after-hover.duration" = 2000;
           "zen.view.show-newtab-button-top" = false;
