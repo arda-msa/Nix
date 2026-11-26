@@ -4,7 +4,7 @@ binds {
     Mod+Shift+0 { show-hotkey-overlay; }
 
     Mod+Return hotkey-overlay-title="Open Terminal: kitty" { spawn "kitty"; }
-    Mod+E hotkey-overlay-title="Open File Manager: yazi" { spawn "kitty" "-e" "yazi"; }
+    Mod+E hotkey-overlay-title="Open File Manager: Luciole" { spawn "luciole"; }
 
     Mod+Space { spawn-sh "noctalia msg panel-toggle launcher"; }
     Mod+S { spawn-sh "noctalia msg panel-toggle control-center"; }
