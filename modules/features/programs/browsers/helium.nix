@@ -8,6 +8,7 @@
 
     programs.chromium = {
       enable = true;
+
       extensions = [
         "nngceckbapebfimnlniiiahkandclblb" # Bitwarden Password Manager
         "fnaicdffflnofjppbagibeoednhnbjhg" # Floccus Bookmarks Sync
@@ -15,6 +16,12 @@
         "onglbklimdjicpdadjieknodkkmjldoa" # Reddit Enhancer
         "fadndhdgpmmaapbmfcknlfgcflmmmieb" # FrankerFaceZ
       ];
+
+      extraOpts = {
+        BrowserSignin = 0;
+        PasswordManagerEnabled = false;
+        RestoreOnStartup = 1; # Continue where you left off
+      };
     };
   };
 }
