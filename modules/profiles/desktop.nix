@@ -6,6 +6,7 @@
       audio
       bluetooth
       firefox
+      helium
       hyprland
       localsend
       nautilus
