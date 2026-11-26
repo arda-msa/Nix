@@ -20,7 +20,6 @@
 
   flake.modules.homeManager.desktop = {
     imports = with self.modules.homeManager; [
-      brave-origin
       calibre
       cue
       distrobox
