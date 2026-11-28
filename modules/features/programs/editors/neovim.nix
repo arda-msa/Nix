@@ -11,10 +11,16 @@
       gcc
       tree-sitter
 
+      # Lua
       lua-language-server
       stylua
+
+      # Nix
       nixd
       nixfmt
+
+      # Python
+      python3
 
       (writeShellApplication {
         name = "tvim";
